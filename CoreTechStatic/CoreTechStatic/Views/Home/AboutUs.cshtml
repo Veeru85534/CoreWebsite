@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CoreTechStatic.Models.Static.AboutUs>
+
+<style>
+
+    .itemImg {
+        width: 400px;
+        margin: 0px auto;
+        margin: 3px;
+        padding: 3px;
+    }
+</style>
+<div class="card rounded-0  mb-3" style="background-color:#1d3557;opacity:0.8">
+    <div class="m-3">
+        <h1 class="text-white text-center">About Us</h1>
+    </div>
+</div>
+@foreach (var Iteam in Model)
+{
+    <div class="container">
+    <div class="row">
+        <div class="itemImg m-auto col">
+            <img src="~/Images/AboutUs/@Iteam.Image" class="img-thumbnail border-0" />
+        </div>
+        <div class="col-md-8 m-auto p-4">            
+                <h2 class="fw-bold" style="color:#3d5a80">@Iteam.Title</h2>
+            @Html.Raw(Iteam.Description)
+        </div>
+    </div>
+    </div>
+}

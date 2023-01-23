@@ -1,0 +1,61 @@
+﻿@model dynamic;
+
+<section class="h-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-10 col-xl-10">
+                <div class="card" style="border-radius: 10px;">
+                    <div class="card-header py-4">
+                        <h5 class="text-muted mb-0">Order Summury</h5>
+                    </div>
+                    <div class="card-body p-3">
+                        @foreach (var Iteam in Model.Cart)
+                        {
+
+                            <div class="card shadow-0 border mb-2">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="~/Images/Products/@Iteam.Products.P_Image"
+                                             class="img-fluid" alt="Phone">
+                                        </div>
+                                        <div class="col-md-4 text-center d-flex justify-content-center align-items-center">
+                                            <p class="text-muted mb-0">@Iteam.Products.P_Name</p>
+                                        </div>
+                                        
+                                        <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                            <p class="text-muted mb-0 small">Qty: @Iteam.Quntity</p>
+                                        </div>
+                                        <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                            <p class="text-muted mb-0 small">Rs: @Iteam.UnitPrice /-<br/>
+                                            (@Iteam.Gst%)    
+                                            </p>
+                                        </div>
+                                        <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
+                                            <p class="text-muted mb-0 small">Rs: @Iteam.SubTotalPrice /-</p>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                       }                       
+                       @foreach(var Iteam in Model.Order){
+                        <div class="d-flex pt-2">
+                            <p class="fw-bold mb-0">Order Details</p>                            
+                        </div>
+
+                        <div class="d-flex justify-content-between pt-2">
+                            <p class="text-muted mb-0">Order Number : @Iteam.OrderId</p>
+                            <p class="text-muted mb-0"><span class="fw-bold me-4">Delivery Charges</span>+ 150/-</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                                <p class="text-muted mb-0">Order Date : @Iteam.OrderDate.ToString("dd-MMM-yyyy")</p>                            
+                                <p class="text-muted mb-0"><span class="fw-bold me-4">Total Rs:</span> @Iteam.TotalPrice /-</p>
+                        </div>
+                        }
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  

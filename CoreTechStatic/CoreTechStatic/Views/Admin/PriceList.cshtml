@@ -1,0 +1,33 @@
+﻿@model IEnumerable<CoreTechStatic.Models.PriceMaster>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<div class="col-md-3 m-2 ms-auto">
+    <input id="myInput" type="text" class="form-control" placeholder="Search...">
+</div>
+
+<div class="table-responsive">
+    <table class="table  shadow-lg mb-5  rounded table-bordered table-hover">
+        <thead class="bg-secondary text-white">
+            <tr>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Discount</th>
+                <th>Final Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="bg-white" id="myTable">
+            @foreach (var Iteam in Model)
+            {
+                <tr>
+                    <td>@Iteam.PriceId</td>
+                    <td>@Iteam.Products.P_Name</td>
+                    <td>@Iteam.DiscountPrice</td>
+                    <td>@Iteam.FinalPrice</td>
+                    <td><a asp-action="EditPrice" asp-controller="Admin" asp-route-PriceId="@Iteam.PriceId" class="text-decoration-non text-danger">Change price</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

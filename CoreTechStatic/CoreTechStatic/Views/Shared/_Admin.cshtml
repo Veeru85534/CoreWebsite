@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="~/Images/AppImages/AdminTabIcon.png">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/otherlib/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/adminsite.css" rel="stylesheet" asp-append-version="true" />
+
+</head>
+<style>
+    body {
+        background-color: #d8e1e9;
+    }
+</style>
+<body>   
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom m-auto text-white fw-bold">Admin DashBoard</div>
+            <div class="list-group list-group-flush">
+                <a asp-controller="Admin" asp-action="DashBoard" class="list-group-item list-group-item-action list-group-item-light p-2">
+                    <i class="fa fa-tachometer me-4" aria-hidden="true"></i>Dashboard
+                </a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-2" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                  <i class="fa fa-file me-4" aria-hidden="true"></i>Page <i class="fa fa-caret-down pull-right p-1" aria-hidden="true"></i>
+                </a>
+                <div class="collapse" id="collapseExample1">
+                    <a asp-controller="Admin" asp-action="Banner" class="list-group-item list-group-item-action p-2">Home Page</a>                    
+                    <a asp-controller="Admin" asp-action="AboutUsPage" class="list-group-item list-group-item-action p-2">AboutUs Page</a>
+                </div>                
+                <a class="list-group-item list-group-item-action list-group-item-light p-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa fa-tags me-4" aria-hidden="true"></i>Product <i class="fa fa-caret-down pull-right p-1" aria-hidden="true"></i>
+                </a>
+                <div class="collapse" id="collapseExample">
+                    <a asp-controller="Admin" asp-action="Productlist" class=" list-group-item list-group-item-action p-2">Products</a>
+                    <a asp-controller="Admin" asp-action="AddProduct" class="list-group-item list-group-item-action p-2">Add Product</a>
+                    <a asp-controller="Admin" asp-action="PriceList" asp-route-PriceId="0" class="list-group-item list-group-item-action p-2">Price List</a>
+                    <a asp-controller="Admin" asp-action="CategoryList" class="list-group-item list-group-item-action p-2">Categorys</a>
+                    <a asp-controller="Admin" asp-action="AddCategory" class="list-group-item list-group-item-action p-2">Add Category</a>
+                    <a asp-controller="Admin" asp-action="SpecificationList" class="list-group-item list-group-item-action p-2">Specifications</a>
+                </div>  
+                 <a class="list-group-item list-group-item-action list-group-item-light p-2" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                    <i class="fa fa-shopping-bag me-4" aria-hidden="true"></i>Order <i class="fa fa-caret-down pull-right p-1" aria-hidden="true"></i>
+                </a>
+                <div class="collapse" id="collapseExample2">
+                    <a asp-controller="Admin" asp-action="OrderList" asp-route-Order="1" class="list-group-item list-group-item-action p-2">New Orders</a>
+                    <a asp-controller="Admin" asp-action="OrderList" asp-route-Order="6" class="list-group-item list-group-item-action p-2">Delivered</a>
+                </div>   
+                <a class="list-group-item list-group-item-action list-group-item-light p-2" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                    <i class="fa fa-user me-4" aria-hidden="true"></i>Customers <i class="fa fa-caret-down pull-right p-1" aria-hidden="true"></i>
+                </a>
+                <div class="collapse" id="collapseExample3">
+                    <a asp-controller="Admin" asp-action="UserList" class="list-group-item list-group-item-action p-2">Customers</a>
+                </div>   
+            </div>
+        </div>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark border-bottom" style="background-color:#1d3557">
+                <div class="container-fluid">
+                    <button class="btn btn-sm btn-outline-primary" id="sidebarToggle"><i class="fa fa-align-left" aria-hidden="true"></i></button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item "><a asp-action="Logout" asp-controller="User" class="nav-link text-danger" >Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <div class="container-fluid card p-2" >
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+    </div>
+    @if (TempData["Message"] != null)
+    {
+        <div class="toast-container position-fixed top-0 end-0 p-3 hideToast" id="">
+            <div class="toast show align-items-center bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body text-white">
+                        @TempData["Message"]
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    }
+    else if (TempData["Error"] != null)
+    {
+        <div class="toast-container position-fixed top-0 end-0 p-3 hideToast" id="">
+            <div class="toast show align-items-center bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body text-white">
+                        @TempData["Error"]
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    }
+</body>
+<script src="~/js/adminsite.js" asp-append-version="true"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(".navbar-nav li").hover(function () {
+        var isHovered = $(this).is(":hover");
+        if (isHovered) {
+            $(this).children("ul").stop().slideDown(300);
+        } else {
+            $(this).children("ul").stop().slideUp(300);
+        }
+    });
+    /*!
+    * Start Bootstrap - Simple Sidebar v6.0.5 (https://startbootstrap.com/template/simple-sidebar)
+    * Copyright 2013-2022 Start Bootstrap
+    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+    */
+    //
+    // Scripts
+    //
+
+    window.addEventListener('DOMContentLoaded', event => {
+
+        // Toggle the side navigation
+        const sidebarToggle = document.body.querySelector('#sidebarToggle');
+        if (sidebarToggle) {
+            // Uncomment Below to persist sidebar toggle between refreshes
+            // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+            //     document.body.classList.toggle('sb-sidenav-toggled');
+            // }
+            sidebarToggle.addEventListener('click', event => {
+                event.preventDefault();
+                document.body.classList.toggle('sb-sidenav-toggled');
+                localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+            });
+        }
+
+    });
+
+</script>
+</html>

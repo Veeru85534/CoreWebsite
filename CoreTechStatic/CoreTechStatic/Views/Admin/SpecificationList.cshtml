@@ -1,0 +1,43 @@
+﻿@model IEnumerable<CoreTechStatic.Models.Specification>
+
+<div class="table-responsive">
+    <table class="table table-sm table-bordered">
+        <thead class="bg-secondary text-white">
+            <tr class="">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type_1</th>
+                <th>Type_2</th>
+                <th>Type_3</th>
+                <th>Type_4</th>
+                <th>Type_5</th>
+                <th>Type_6</th>
+                <th>Type_7</th>
+                <th>Type_8</th>
+                <th>Type_9</th>
+                <th>Type_10</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var iteam in Model)
+            {
+                <tr>
+                    <td>@iteam.S_Id</td>
+                    <td>@iteam.Name</td>
+                    <td>@iteam.S_type1</td>
+                    <td>@iteam.S_type2</td>
+                    <td>@iteam.S_type3</td>
+                    <td>@iteam.S_type4</td>
+                    <td>@iteam.S_type5</td>
+                    <td>@iteam.S_type6</td>
+                    <td>@iteam.S_type7</td>
+                    <td>@iteam.S_type8</td>
+                    <td>@iteam.S_type9</td>
+                    <td>@iteam.S_type10</td>
+                    <td><a class="btn btn-sm btn-danger" asp-action="SpecificationEdit" asp-area="" asp-route-id="@iteam.S_Id">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

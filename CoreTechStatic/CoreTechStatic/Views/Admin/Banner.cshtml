@@ -1,0 +1,119 @@
+﻿@using CoreTechStatic
+@model dynamic
+
+<div class="table-responsive-sm mt-5">
+    <h3 class="text-dark fw-bold">Home Page Slides</h3>
+    <table class="table table-bordered table-hover  shadow-lg  rounded">
+        <thead class="bg-secondary text-white">
+            <tr>
+                <th>Slide</th>
+                <th>Image</th>
+                <th>Added Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="bg-white" id="myTable">
+            @foreach (var iteam in Model.Banner)
+            {
+                <tr>
+                    <form enctype="multipart/form-data" asp-action="UpdateSlide" asp-controller="Admin">
+                        <input type="hidden" name="UpdateId" value="@iteam.Slide">
+                        <input type="hidden" name="ImagePath" value="@iteam.BannerImage">
+                    <td>@iteam.Slide</td>
+                    <td class="col-md-3">
+                            @if (iteam.BannerImage == null)
+                            {
+                            <input type="file" class="form-control" name="file" />
+                            }
+                            else
+                            {
+                            <a href="~/Images/Banner/@iteam.BannerImage">@iteam.BannerImage</a>
+                            }
+                    </td>
+                    <td class="text-center">
+                            @if (iteam.AddedDate == null)
+                            {
+                            <span>-----</span>
+                            }
+                            else
+                            {
+
+                                @iteam.AddedDate?.ToString("dd/MM/yyyy")
+                            }
+
+                    </td>
+                    <td>
+                            @if (iteam.BannerImage == null)
+                            {
+                            <input type="submit" value="Update Slide" class="btn btn-sm btn-outline-primary" />
+                            }
+                            else
+                            {
+                            <a asp-action="UpdateSlide" asp-route-ImagePath="@iteam.BannerImage" asp-route-UpdateId="@iteam.Slide" asp-route-Slide="RemoveSlide" class="btn btn-sm btn-outline-danger">Remove Slide</a>
+                            }
+                    </td>
+                    </form>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="table-responsive-sm mt-1">
+    <h3 class="text-dark fw-bold">Social Media Link</h3>
+    <table class="table table-bordered table-hover  shadow-lg mb-5  rounded">
+        <thead class="bg-secondary text-white">
+            <tr>
+                <th>SocialMedia Name</th>
+                <th>Link</th>
+                <th>Last Updated</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="bg-white" id="myTable">
+            @foreach (var iteam in Model.SocialMedia)
+            {
+                <tr>
+                    <form asp-action="SocialMedia" asp-controller="Admin">
+                        <input type="hidden" name="Id" value="@iteam.Id">
+                        <input type="hidden" name="LinkStatus" value="@iteam.Link">
+                    <td class="col-md-3">
+                            @iteam.SMName
+                    </td>
+                    <td class="text-center">
+                            @if (iteam.Link == "#")
+                            {
+                            <input type="text" name="Link" class="form-control" />
+                            }
+                            else
+                            {
+                                @iteam.Link
+                            }
+
+                    </td>
+                    <td>
+                            @if (iteam.UpdatedDate == null)
+                            {
+                            <span>------</span>
+                            }
+                            else
+                            {
+                                @iteam.UpdatedDate?.ToString("dd/MM/yyyy")
+                            }
+                    </td>
+                    <td>
+                            @if (iteam.Link == "#")
+                            {
+                                <button type="submit" class="btn btn-sm btn-outline-primary">Updated</button>                                
+                            }
+                            else
+                            {
+                            <a asp-action="SocialMedia" asp-controller="Admin" asp-route-Id="@iteam.Id" asp-route-Link="RemoveLink" class="btn btn-outline-danger btn-sm">Remove</a>
+                            }
+                    </td>
+                    </form>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

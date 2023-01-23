@@ -1,0 +1,429 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<style>
+
+    #custCarousel .carousel-indicators {
+        position: static;
+        margin-top: 20px;
+    }
+
+        #custCarousel .carousel-indicators > li {
+            width: 100px;
+        }
+
+        #custCarousel .carousel-indicators li img {
+            display: block;
+            opacity: 0.5;
+        }
+
+        #custCarousel .carousel-indicators li.active img {
+            opacity: 1;
+        }
+
+        #custCarousel .carousel-indicators li:hover img {
+            opacity: 0.75;
+        }
+
+    .carousel-item img {
+        width: 80%;
+    }
+
+    .nav-tab-active {
+        color: #1d3557;
+    }
+
+    .tab-content {
+        display: none;
+    }
+
+        .tab-content.active {
+            top: 25%;
+            display: block;
+        }
+</style>
+
+
+@foreach (var Item in Model.Products)
+{
+    <div class="container">
+        <div class="row mt-4 mb-4">
+
+            <div class="col-md-5">
+
+                <div id="carouselExampleControls" class="shadow-lg p-3 mb-2 bg-white rounded carousel carousel-dark m-auto slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                        </button>
+                        @if (Item.P_ImageSec != null)
+                        {
+                            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        }
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <!--<img class="img-thumbnail border-0" src="~/Images/Products/@Item.P_Image" />-->
+                            <div style="overflow: hidden;">
+                                <img id="NZoomImg" data-NZoomscale="2"
+                                 src="~/Images/Products/@Item.P_Image" class="w-100 img-thumbnail border-0" alt="">
+                            </div>
+                        </div>
+
+                        @if (Item.P_ImageSec != null)
+                        {
+                            <div class="carousel-item">
+                                <div style="overflow: hidden;">
+                                    <img id="NZoomImg2" data-NZoomscale2="2"
+                                 src="~/Images/Products/@Item.P_ImageSec" class="w-100 img-thumbnail border-0" alt="">
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <button class="carousel-control-prev bottom-0" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+            </div>
+            <div class="col bg-white rounded">
+                <div class="h6 text-dark m-1 p-0">@Item.Category.Ca_Name</div>
+                <div class="h4">@Item.P_Name</div>
+                <div class="m-0 p-0">
+                    @if (Item.Avalbility.Av_Id == 1)
+                    {
+                        <p class="m-1">Availability : <b class="text-success m-1">In Stock </b></p>
+                    }
+                    else if (Item.Avalbility.Av_Id == 2)
+                    {
+                        <p class="m-1">
+                            Availability : <b class="text-danger m-1"> Out Of Stock </b><br />
+                            <span class="text-danger">@Item.Message</span>
+                        </p>
+
+                    }
+                    <hr class="m-0 p-0" />
+                </div>
+                <a onclick="addWhishList(@Item.P_Id)" href="#" class="2ndColor border-0 bg-white small pe-auto ms-2">Add to Wishlist</a>
+                <div class="text-dark m-3">
+                    <div class="m-1">1. @Item.Specification.S_type1<br /></div>
+                    <div class="m-1">2. @Item.Specification.S_type2<br /></div>
+                    @if (Item.Specification.S_type3 != null)
+                    {
+                        <div class="m-1">3. @Item.Specification.S_type3<br /></div>
+                    }
+                    @if (Item.Specification.S_type4 != null)
+                    {
+                        <div class="m-1">4. @Item.Specification.S_type4<br /></div>
+                    }
+                    @if (Item.Specification.S_type5 != null)
+                    {
+                        <div class="m-1">5. @Item.Specification.S_type5<br /></div>
+                    }
+                    @if (Item.Specification.S_type6 != null)
+                    {
+                        <div class="m-1">6. @Item.Specification.S_type6<br /></div>
+                    }
+                    @if (Item.Specification.S_type7 != null)
+                    {
+                        <div class="m-1">7. @Item.Specification.S_type7<br /></div>
+                    }
+                    @if (Item.Specification.S_type8 != null)
+                    {
+                        <div class="m-1">8. @Item.Specification.S_type8<br /></div>
+                    }
+                    @if (Item.Specification.S_type9 != null)
+                    {
+                        <div class="m-1">9. @Item.Specification.S_type9<br /></div>
+                    }
+                    @if (Item.Specification.S_type10 != null)
+                    {
+                        <div class="m-1">10. @Item.Specification.S_type10<br /></div>
+                    }
+                </div>
+                @if (Item.PriceID != null)
+                {
+
+
+                    //Final Price
+                    var GstRate = (Item.PriceMaster.FinalPrice * Item.HsnMaster.GST / 100);
+                    var TotalAmount = Math.Round(GstRate + Item.PriceMaster.FinalPrice);
+
+                    <div class="">
+                        <p class="h3 m-2">
+                            ₹ @TotalAmount.ToString("0.00") /- @if (Item.PriceMaster.DiscountPrice != null)
+                            {
+                                //DiscountPrice
+                                var DiscGstRate = (Item.PriceMaster.DiscountPrice * Item.HsnMaster.GST / 100);
+                                var DiscTotalAmount = Math.Round(DiscGstRate + Item.PriceMaster.DiscountPrice);
+                                <b class="h6 m-2 text-center text-secondary text-decoration-line-through">₹ @DiscTotalAmount.ToString("0.00")</b>
+                            }
+                        </p>
+                        <div style="font-size:13px">
+                            (inc GST)<br />
+                            ₹ @Item.PriceMaster.FinalPrice (+@Item.HsnMaster.GST % GST extra)
+                        </div>
+                        <div class="m-2 m-auto">
+                            @if (Item.Avalbility.Av_Id == 1)
+                            {
+                                <input type="text" hidden id="PId" value="@Item.P_Id">
+                                <input type="text" hidden id="PRID" value="@Item.PriceID">
+                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex m-2">
+                                    <button class="btn rounded-0 text-dark bg-opacity-25 bg-secondary px-2"
+                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </button>
+
+                                    <input min="1" required max="10" name="quantity" id="QT" value="1" type="number"
+                               class="form-control rounded-0 text-center form-control-sm" />
+
+                                    <button class="btn text-dark bg-opacity-25 bg-secondary rounded-0 px-2"
+                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <button type="button" style="background-color:#1d3557" class="submitClick m-auto btn text-white avoidDoubleClick rounded-pill" id="btnGet"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Add to Cart</button>
+                            }
+                            else if (Item.Avalbility.Av_Id == 2)
+                            {
+                                <button type="submit" class="btn btn-primary rounded-pill" disabled>AddTo Cart</button>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="card m-0 bg-white p-2">
+            <div class="p-2 d-flex justify-content-center" style="background-color:#98c1d9">
+
+            <a class="p-2"  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <h5>Description</h5>
+            </a>
+            <a class="collapsed p-2 pointer-event" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <h5>specification</h5>
+            </a>
+            </div>
+            <hr />
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            @Item.P_Description
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <table class="table  table-hover ">
+                                <tr class="text-dark m-3">
+                                    <td class="m-1">@Item.Specification.S_type1<br /></td>
+                                </tr>
+                                <tr>
+                                    <td class="m-1">@Item.Specification.S_type2<br /></td>
+                                </tr>
+                                @if (Item.Specification.S_type3 != null)
+                                {
+                                    <tr>
+                                        <td class="m-1">@Item.Specification.S_type3<br /></td>
+                                    </tr>
+                                }
+                                @if (Item.Specification.S_type4 != null)
+                                {
+                                    <tr>
+                                        <td class="m-1">@Item.Specification.S_type4<br /></td>
+                                    </tr>
+                                }
+                                @if (Item.Specification.S_type5 != null)
+                                {
+                                    <tr>
+                                        <td class="m-1">@Item.Specification.S_type5<br /></td>
+                                    </tr>
+                                }
+                                @if (Item.Specification.S_type6 != null)
+                                {
+                                    <tr>
+                                        <td class="m-1">@Item.Specification.S_type6<br /></td>
+                                    </tr>
+                                }
+                                @if (Item.Specification.S_type7 != null)
+                                {
+                                    <tr>
+                                        <td class="m-1">@Item.Specification.S_type7<br /></td>
+                                    </tr>
+                                }
+                                @if (Item.Specification.S_type8 != null)
+                                {
+                                    <tr>
+                                        <td class="m-1">@Item.Specification.S_type8<br /></td>
+                                    </tr>
+                                }
+                                @if (Item.Specification.S_type9 != null)
+                                {
+                                    <tr>
+                                        <td class="m-1">@Item.Specification.S_type9<br /></td>
+                                    </tr>
+                                }
+                                @if (Item.Specification.S_type10 != null)
+                                {
+                                    <tr>
+                                        <td class="m-1">@Item.Specification.S_type10<br /></td>
+                                    </tr>
+                                }
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+}
+
+
+
+
+
+<div class="container">
+    <div class="row mt-2">
+        <div class="col">
+            <h5><b>Related products</b></h5>
+        </div>
+    </div>
+    <div class="row wrapper">
+        <div class=" mb-3" style="height:3px;background-color:#e63946"></div>
+        @foreach (var iteam in Model.Products2)
+        {
+            <div class="col-6 col-md-3 p-0 mb-2 item">
+                <div class="card p-1 border-2 rounded  m-1">
+                    <span class="ImageSize">
+                        <img src="~/Images/Products/@iteam.P_Image" class="img-thumbnail border-0 m-0 p-0" alt="Product Image" />
+                    </span>
+                    @if (iteam.Avalbility_Id == 2)
+                    {
+                        <div class="position-absolute text-danger"> Out of stock</div>
+                    }
+
+                    <div class="position-absolute end-0 me-2"><button type="button" value="@iteam.P_Id" id="addWishList" onclick="addWhishList(@iteam.P_Id)" class="border-0 bg-white"><i class="fa fa-heart-o" style="font-size:22px" aria-hidden="true"></i></button></div>
+                    <!--<div class="position-absolute end-0 me-2"><a href="#" class=""><i class="fa fa-heart" style="font-size:22px" aria-hidden="true"></i></a></div>-->
+                    <span style="height:2px;background-color:#ee6c4d;"></span>
+                    <div class="" style="height:100px">
+                        <a asp-action="ProductDetails" class="text-decoration-none" asp-route-category="@iteam.Category.Ca_ID" asp-route-id="@iteam.P_Id">
+                            <div class="card-body p-0 m-0" id="nameProduct">
+                                <div class="card-title m-0 text-center fw-bold">@iteam.P_Name</div>
+                            </div>
+                        </a>
+                        @if (iteam.PriceID != null)
+                        {
+                            ////Final price calculation
+                            var GstTotal = (iteam.PriceMaster.FinalPrice * iteam.HsnMaster.GST / 100);
+                            var Round = GstTotal + iteam.PriceMaster.FinalPrice;
+                            var SubTotal = Math.Round((decimal)Round);
+                            <p class="p-0 m-0 text-center">
+                                <span class="col text-success" style="text-decoration:solid">Rs: @SubTotal.ToString("0.00") /-</span>
+
+                                @if (iteam.PriceMaster.DiscountPrice != null)
+                                {
+                                    ///Discount price calculation
+                                    decimal DiscSubTotal = 0;
+                                    var DiscGstTotal = (iteam.PriceMaster.DiscountPrice * iteam.HsnMaster.GST / 100);
+                                    var DiscRount = (DiscGstTotal + iteam.PriceMaster.DiscountPrice);
+                                    DiscSubTotal += Math.Round((decimal)DiscRount);
+                                    <div class="text-danger text-center text-decoration-line-through h6">Rs: @DiscSubTotal.ToString("0.00")/-</div>
+                                }
+                            </p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/nzoom.mi.js"></script>
+
+
+<script>
+    $('.nav-tab').click(function (e) {
+        //Toggle tab link
+        $(this).addClass('nav-tab-active').siblings().removeClass('nav-tab-active');
+
+        //Toggle target tab
+        $($(this).attr('href')).addClass('active').siblings().removeClass('active');
+    });
+    /*Add to cart with json start*/
+    $(function () {
+        $("#btnGet").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Home/AddCart",
+                data: {
+                    "Product_Id": $("#PId").val(),
+                    "Quntity": $("#QT").val(),
+                    "PriceId": $("#PRID").val()
+                },
+                success: function (response) {
+                    if (response.code === 0) {
+                        var windowurl = $(location).attr('pathname');
+                        //window.location = "http://localhost:5216/User/Login";
+                        $("#hideToast").html(`<div class="toast show align-items-center bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                                                    <div class="d-flex">
+                                                        <div class="toast-body text-white">
+                                                                        `+ response.message + `<b><a href='/User/Login?ReturnUrl=${windowurl}'> Sign In</a></b>
+                                                        </div>
+                                                        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                    </div>
+                                                </div>`);
+                        $('.submitClick').prop('disabled', false);
+                    }
+                    if (response.code === 2) {
+                        $("#hideToast").html(`<div class="toast show align-items-center bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                                                    <div class="d-flex">
+                                                        <div class="toast-body text-white">
+                                                                `+ response.message + `
+                                                        </div>
+                                                        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                    </div>
+                                                </div>`);
+                        $('.submitClick').prop('disabled', false);
+                    }
+                    if (response.code === 1) {
+                        $("#hideToast").html(`<div class="toast show align-items-center bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+                                                    <div class="d-flex">
+                                                        <div class="toast-body text-white">
+                                                                `+ response.message + `
+                                                        </div>
+                                                        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                    </div>
+                                                </div>`);
+                        $('.submitClick').prop('disabled', false);
+                    }
+
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                },
+                error: function (response) {
+                    console.log(response.responseText);
+                }
+            });
+        });
+    });        /*Add to cart with json end*/
+
+
+</script>

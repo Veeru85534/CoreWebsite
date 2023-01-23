@@ -1,0 +1,95 @@
+﻿@model IEnumerable<CoreTechStatic.Models.Products>
+@{
+    ViewData["Title"] = "Product List";
+}
+<style>
+    .nowrap {
+        white-space: nowrap;
+    }
+</style>
+<div class="h5">Product List</div>
+<hr />
+<div class="col-md-3  shadow-lg mb-1  rounded m-2 ms-auto">
+    <input id="myInput" type="text" class="form-control" placeholder="Search...">
+</div>
+<div class="table-responsive-sm">
+    <table class="table table-bordered table-hover  shadow-lg mb-5  rounded">
+        <thead class="bg-secondary text-white">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Added_Date</th>
+                <th>Category</th>
+                <th>HSN</th>
+                <th>Specification</th>
+                <th>Price</th>
+                <th>Avalbility</th>
+                <th>Active</th>
+                <th>__Edit__</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white" id="myTable">
+            @foreach (var iteam in Model)
+            {
+                <tr>
+                    <td>@iteam.P_Id</td>
+                    <td>@iteam.P_Name</td>
+                    <td>@iteam.P_AddDate.ToString("dd-MM-yyyy")</td>
+                    <td>@iteam.Category.Ca_Name</td>
+                    <td>@iteam.HsnCode</td>
+                    <td class="text-center">
+                        <a class=" text-decoration-none link" asp-action="SpecificationEdit" asp-area="" asp-route-id="@iteam.Specification.S_Id">@iteam.Specification.S_Id</a>
+                    </td>
+                    <td class="text-center ">
+                        @if (iteam.PriceID == null)
+                        {
+                            <a asp-action="AddPrice" asp-controller="Admin" asp-route-ProductId="@iteam.P_Id" class="text-danger">Add_Price</a>
+                        }
+                        else
+                        {
+                            <a asp-action="PriceList" class="text-success text-decoration-none" asp-controller="Admin" asp-route-PriceId="@iteam.PriceID">
+                                @iteam.PriceMaster.FinalPrice
+                            </a>
+                        }
+                    </td>
+                    <td>
+                        @if (iteam.Avalbility_Id == 1)
+                        {
+                            <form asp-action="ActiveProduct" asp-controller="Admin">
+                                <button type="submit" class="btn link-primary" asp-controller="Admin" asp-action="ActiveProduct" asp-route-StockId="@iteam.Avalbility_Id" asp-route-ActiveId="null" asp-route-id="@iteam.P_Id">@iteam.Avalbility.Av_Name</button>
+                                <input type="text" size="6" name="Message" value="" class="p-0 m-0" />
+                                <input type="hidden" size="6" name="StockId" value="@iteam.Avalbility_Id" class="p-0 m-0" />
+                            </form>
+                        }
+                        else if (iteam.Avalbility_Id == 2)
+                        {
+                            <a class="link-danger" asp-controller="Admin" asp-action="ActiveProduct" asp-route-StockId="@iteam.Avalbility_Id" asp-route-ActiveId="null" asp-route-id="@iteam.P_Id">@iteam.Avalbility.Av_Name</a>
+
+                            <br />
+                            <span class="text-muted  nowrap">@iteam.Message</span>
+                        }
+                    </td>
+                    <td>
+                        @if (iteam.Active_Id == 1)
+                        {
+                            <a class="link-primary" asp-controller="Admin" asp-action="ActiveProduct" asp-route-ActiveId="@iteam.Active_Id" asp-route-StockId="null" asp-route-id="@iteam.P_Id">Active</a>
+                        }
+                        else if (iteam.Active_Id == 2)
+                        {
+                            <a class="link-danger" asp-controller="Admin" asp-action="ActiveProduct" asp-route-StockId="null" asp-route-StockId="@iteam.Avalbility_Id" asp-route-ActiveId="@iteam.Active_Id" asp-route-id="@iteam.P_Id">Deactive</a>
+                        }
+                    </td>
+                    <td>
+                        <a asp-controller="Admin" asp-action="EditProduct" asp-route-ProductID="@iteam.P_Id" class="text-danger text-decoration-none text-center">Edit<i class="fa fa-pencil" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+
+</script>

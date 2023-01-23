@@ -1,0 +1,118 @@
+﻿@model IEnumerable<CoreTechStatic.Models.WishList>
+@{
+    ViewData["Title"] = "WishList";
+}
+
+<div class="card rounded-0  mb-3" style="background-color:#1d3557;opacity:0.8">
+    <div class="m-3">
+        <h1 class="text-white text-center">WishList</h1>
+    </div>
+</div>
+
+<div class="container">
+    @if (Model.Count() == 0)
+    {
+        <div class="text-center opacity-25 text-black-50">
+            <i class="fa fa-heart-o" style="font-size:200px" aria-hidden="true"></i>
+        </div>
+        <div class="text-center">
+            <h2 class="fw-bold">Wishlist is empty.</h2><br>
+
+            You don't have any products in the wishlist yet.<br/>
+            You will find a lot of interesting products on our "Home" page.<br/>
+
+
+            <a  asp-action="Index" asp-controller="Home" style="background-color:#3d5a80" class="btn rounded-pill m-4 p-2 w-25 text-white">Return to Home</a>
+        </div>
+    }
+    @foreach (var iteam in Model)
+    {
+        <div class="card mb-2" id="@iteam.WishListId">
+            <div class="card-body d-flex p-3">
+                <div class="">
+                    <img src="~/Images/Products/@iteam.Products.P_Image" width="100" class="img-thumbnail m-0 p-0" alt="Product Image" />
+                </div>
+                <a asp-action="ProductDetails" class="text-decoration-none" asp-route-category="@iteam.Products.Ca_Id" asp-route-id="@iteam.ProductId">
+                <div class="p-2">
+                    <span class="fw-bold">@iteam.Products.P_Name</span>
+                    @if (iteam.Products.Avalbility_Id == 1)
+                    {
+                        <p class="m-1">Availability : <b class="text-success m-1">In Stock </b></p>
+                    }
+                    else if (iteam.Products.Avalbility_Id == 2)
+                    {
+                        <p class="m-1">Availability : <b class="text-danger m-1"> Out Of Stock </b></p>
+                    }                
+                </div>
+                </a>
+                <div class="ms-auto mt-auto mb-auto me-2">
+                    <a onclick="removeWishList(@iteam.WishListId)" href="#" class="text-danger border-0 bg-white"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script>
+    function removeWishList(PID) {
+        var id = PID;
+        var pId = id;
+        $.ajax({
+            type: "POST",
+            url: "Home/RemoveWishList",
+            data: {
+                Id: id
+            },
+            success: function (response) {
+                if (response.code === 0) {
+                    var windowurl = $(location).attr('pathname');
+                    //window.location = "http://localhost:5216/User/Login";
+                    $("#hideToast").html(`<div class="toast show align-items-center bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                                                    <div class="d-flex">
+                                                        <div class="toast-body text-white">
+                                                                        `+ response.message + `<b><a href='/User/Login?ReturnUrl=${windowurl}'> Sign In</a></b>
+                                                        </div>
+                                                        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                    </div>
+                                                </div>`);
+                }
+                if (response.code === 2) {
+                    $("#hideToast").html(`<div class="toast show align-items-center bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                                                    <div class="d-flex">
+                                                        <div class="toast-body text-white">
+                                                                `+ response.message + `
+                                                        </div>
+                                                        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                    </div>
+                                                </div>`);
+                }
+                if (response.code === 1) {
+                    $("#hideToast").html(`<div class="toast show align-items-center bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+                                                    <div class="d-flex">
+                                                        <div class="toast-body text-white">
+                                                                `+ response.message + `
+                                                        </div>
+                                                        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                    </div>
+                                                </div>`);
+                    $('#' + id).fadeOut();
+                }
+                if (response.code == -1) {
+                    console.log(response.message);
+                }
+            },
+            failure: function (response) {
+                alert(response.responseText);
+            },
+            error: function (response) {
+                console.log(response.responseText);
+            }
+        });
+    }
+
+
+</script>

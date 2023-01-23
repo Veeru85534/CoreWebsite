@@ -1,0 +1,31 @@
+﻿@model CoreTechStatic.Models.Static.AboutUs
+
+<div class="col-md-10 m-auto mb-2">
+    <form enctype="multipart/form-data" asp-action="AboutUsPage" asp-controller="Admin" method="post">
+        <input type="hidden" asp-for="ID" />
+        <input type="hidden" asp-for="Image" />
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" asp-for="Title" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Image</label>
+            <input type="file"  name="file" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <textarea asp-for="Description" id="editor"></textarea>
+        </div>
+        <div class="form-group m-2 text-center">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script>
+    tinymce.init({
+        selector: 'textarea#editor',
+    });
+</script>

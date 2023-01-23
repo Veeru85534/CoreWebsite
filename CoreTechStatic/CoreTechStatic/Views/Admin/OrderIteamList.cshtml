@@ -1,0 +1,49 @@
+﻿@model IEnumerable<CoreTechStatic.Models.Cart>
+
+    @{
+    //var TotalPrice = Model.Sum(sm => sm.TotalPrice);
+    var TotalItam = Model.Sum(sm => sm.Quntity);
+    decimal? SUbTotal = 0;
+    }
+<table class="table table-sm table-primary">
+    <thead>
+        <tr>            
+            <th>Cart No</th>            
+            <th>Product Id</th>
+            <th>Quntity</th>
+            <th>Added Date</th>
+            <th>Check Out Date</th>            
+            <th>Sub Total</th>            
+        </tr>
+    </thead>
+    <thead>
+        @foreach (var Itam in Model)
+        {
+            <tr>                
+                <td>@Itam.Cart_Id</td>                
+                <td>@Itam.Products.P_Name</td>
+                <td>@Itam.Quntity</td>
+                <td>@Itam.AddedDate.ToString("dd-MM-yyyy")</td>
+                <td>@Itam.CheckOutDate?.ToString("dd-MM-yyyy")</td>
+                <td>@Itam.SubTotalPrice/-</td>
+            @{
+
+                    SUbTotal += Itam.SubTotalPrice;
+
+            }
+            </tr>
+        }        
+        <tr>                        
+            <td></td>
+            <td></td>
+            <td>@TotalItam</td>
+            <td></td>
+            <td colspan="1" class="text-danger">Total Price : @SUbTotal/-</td>            
+            <td class="text-success"> Round: @Math.Round((decimal)SUbTotal).ToString("0.00")/-</td>
+        </tr>
+    </thead>
+</table>
+<div>
+
+
+</div>

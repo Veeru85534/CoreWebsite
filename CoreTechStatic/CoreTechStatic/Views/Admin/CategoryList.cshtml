@@ -1,0 +1,26 @@
+﻿@model IEnumerable<CoreTechStatic.Models.Category>
+
+<div class="table-responsive-sm">
+    <table class="table table-sm table-bordered">
+        <thead class="bg-secondary text-white">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var iteam in Model)
+            {
+                <tr>
+                    <td>@iteam.Ca_ID</td>
+                    <td>@iteam.Ca_Name</td>
+                    <td><a href="~/Images/Category/@iteam.Ca_Image">@iteam.Ca_Image</a></td>
+                    <td>@iteam.Ca_Description</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

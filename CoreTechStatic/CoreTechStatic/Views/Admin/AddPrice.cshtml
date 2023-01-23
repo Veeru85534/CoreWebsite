@@ -1,0 +1,43 @@
+﻿@model CoreTechStatic.Models.PriceMaster
+<div class="lightbox">
+  <div class="row">
+    <div class="col-lg-6">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp"
+        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+        alt="Table Full of Spices"
+        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
+      />
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Square/1.webp"
+        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Square/1.webp"
+        alt="Coconut with Strawberries"
+        class="w-100 shadow-1-strong rounded"
+      />
+    </div>
+    <div class="col-lg-6">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Vertical/1.webp"
+        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Vertical/1.webp"
+        alt="Dark Roast Iced Coffee"
+        class="w-100 shadow-1-strong rounded"
+      />
+    </div>
+  </div>
+</div>
+<div class="col-md-4  shadow-lg mb-5  rounded mt-4 m-auto bg-white p-3">
+    <form asp-action="AddPrice" asp-controller="Admin" method="post">
+        <input type="text" hidden asp-for="ProductId" />
+        <div class="form-group">
+             <label>MRP</label>
+             <input type="text" class="form-control" asp-for="DiscountPrice" />
+        </div>
+        <div class="form-group">
+             <label>Final Price</label>
+             <input required type="text" class="form-control" asp-for="FinalPrice" />
+        </div>
+            <div class="form-group m-2 text-center">
+                <input type="submit"  class="btn btn-sm btn-primary"/>
+            </div>
+    </form>
+</div>

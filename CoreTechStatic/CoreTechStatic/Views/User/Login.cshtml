@@ -1,0 +1,312 @@
+﻿@model IEnumerable<CoreTechStatic.Models.User>
+@{
+    TempData.Keep("ReturnUrl");
+}
+<style>
+    th {
+        color: #ee6c4d;
+    }
+</style>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="container mt-5 mb-5">
+        @foreach (var itam in Model)
+        {
+            <div class="row">
+                <div class="col-md">
+                    <div class="card rounded rounded-3 shadow-lg p-0 mb-3 rounded border-0">
+                        <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <div class="card-body  m-2 p-2 d-flex">
+                                <div class="ml-2 mt-1">
+                                    <i class="fa fa-user-circle-o" style="font-size:40px" aria-hidden="true"></i>
+                                </div>
+                                <div class="ms-3">
+                                    Welcome
+                                    <p class="m-0 p-0"><b>@itam.User_Name</b></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card shadow-lg p-0 m-0 mb-5 rounded border-0">
+                        <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <div class="card-body  m-1 p-2 d-flex">
+                                <div class="">
+                                    <b>Manage Profile</b>
+                                </div>
+                                <div class="ms-auto">
+                                    <i class="fa fa-caret-right" style="font-size:25px" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <hr class="m-0 p-0" />
+                        <a class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <div class="card-body  m-1 p-2 d-flex">
+                                <div class="">
+                                    <b>Manage Addresses</b>
+                                </div>
+                                <div class="ms-auto">
+                                    <i class="fa fa-caret-right" style="font-size:25px" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <hr class="m-0 p-0" />
+                        <a asp-action="OrderList" class="d-flex" asp-controller="Home">
+                            <div class="card-body  m-1 p-2 d-flex justify-content-between">
+                                <div class="">
+                                    <b>My Order</b>
+                                </div>
+                                <div class="">
+                                    <i class="fa fa-caret-right" style="font-size:25px" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <hr class="m-0 p-0" />
+                        <a asp-action="CartItem" class="d-flex" asp-controller="Home">
+                            <div class="card-body  m-1 p-2 d-flex">
+                                <div class="">
+                                    <b>My Cart</b>
+                                </div>
+                                <div class="ms-auto">
+                                    <i class="fa fa-caret-right" style="font-size:25px" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <hr class="m-0 p-0" />
+                        <div class="card-body  m-1 p-2 d-flex">
+                            <div class="">
+                                <a href="#">
+                                    <b>Payment</b>
+                                </a>
+                            </div>
+                            <div class="ms-auto">
+                                <a href="#">
+                                    <i class="fa fa-caret-right" style="font-size:25px" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <hr class="m-0 p-0" />
+                        <div class="card-body  m-1 p-2 d-flex justify-content-center">
+                            <div class="form-group text-center">
+                                <a asp-action="Logout" asp-controller="User">
+                                    <b>
+                                        Log Out  <i class="fa fa-sign-out m-auto" aria-hidden="true"></i>
+                                    </b>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 card shadow-lg p-0 mb-5 rounded border-0">
+                    <div class="accordion accordion-flush top-0" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button aria-expanded="true" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    Account
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="table table-sm table-borderless table-hover card-body m-3">
+                                        <tr>
+                                            <th>Full Name </th>
+                                            <td>: @itam.User_Name</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Firts Name</th>
+                                            <td>: @itam.First_Name</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Last Name</th>
+                                            <td>: @itam.Last_Name</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phone Number</th>
+                                            <td>: @itam.Phone_No</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Email Id</th>
+                                            <td>: @itam.Email_Id</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Address</th>
+                                            <td>: @itam.Address</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Shipping address</th>
+                                            <td>: @itam.ShippingAddress</td>
+                                        </tr>
+                                        <tr>
+                                            <th>City</th>
+                                            <td>: @itam.CityMaster.CityName - @itam.Pin_Code</td>
+                                        </tr>
+                                        <tr>
+                                            <th>State</th>
+                                            <td>: @itam.StateMaster.StateName</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Country</th>
+                                            <td>: @itam.Country</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Manage Profile
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col form-group">
+                                            <label>First Name </label>
+                                            <input type="text" required autocomplete="off" value="@itam.First_Name" name="First_Name" class="form-control form-control-sm " />
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Last Name </label>
+                                            <input type="text" required autocomplete="off" value="@itam.Last_Name" name="Last_Name" class="form-control form-control-sm " />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col form-group">
+                                            <label>Phone No</label>
+                                            <input type="tel" pattern="[0-9]{10}" value="@itam.Phone_No" title="Please entry 10-digit Phone number" autocomplete="off" required name="Phone_No" maxlength="10" class="form-control form-control-sm " />
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Email Id</label>
+                                            <input type="email" autocomplete="off" value="@itam.Email_Id" required name="Email_Id" class="form-control form-control-sm " />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <textarea required name="Address" class="form-control form-control-sm ">@itam.Address</textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col form-group">
+                                            <label>State</label>
+                                            <select required class="form-control" id="StateMasterPic" name="State"></select>
+                                            <input type="hidden" value="@itam.State" id="getStateValue" />
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>City</label>
+                                            <select class="form-control" required id="CityMasterPic" name="City"></select>
+                                            <input type="hidden" value="@itam.City" id="getCityValue" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col form-group">
+                                            <label>Country</label>
+                                            <input type="text" value="India" required name="Country" class="disabled form-control form-control-sm " />
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Pin Code</label>
+                                            <input type="text" value="@itam.Pin_Code" required name="Pin_Code" class="form-control form-control-sm " />
+                                        </div>
+                                    </div>
+                                    <div class="m-4 text-center form-group">
+                                        <input type="submit" class="avoidDoubleClick btn btn-sm btn-outline-danger" value="Update Profile" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Manage Addresses
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <form asp-action="ChangeShippingAddress" method="get">
+                                        Your Shipping Address: <span class="text-muted">@itam.ShippingAddress    </span>
+                                        <div class="form-group">
+                                            <label>Address</label>
+                                            <textarea required name="Address" class="form-control form-control-sm "></textarea>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col form-group">
+                                                <label>State</label>
+                                                <select required class="form-control" id="StateMasterPic1" name="State"></select>
+                                            </div>
+                                            <div class="col form-group">
+                                                <label>City</label>
+                                                <select class="form-control" required id="CityMasterPic1" name="City"></select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col form-group">
+                                                <label>Country</label>
+                                                <input type="text" disabled value="India" required name="Country" class="disabled form-control form-control-sm " />
+                                            </div>
+                                            <div class="col form-group">
+                                                <label>Pin Code</label>
+                                                <input type="text" value="@itam.Pin_Code" required name="Pin_Code" class="form-control form-control-sm " />
+                                            </div>
+                                        </div>
+                                        <div class="m-4 text-center form-group">
+                                            <input type="submit" class="avoidDoubleClick btn btn-sm btn-outline-danger" value="Save Changes" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+}
+else
+{
+    <section class="mt-5">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-between">
+                <div class="col-md-5 ">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                     class="img-fluid" alt="Phone image">
+                </div>
+                <div class="col col-md-6">
+                    <form asp-controller="User" asp-action="Login" method="post" class="m-3 bg-light shadow-lg p-3 mb-5  rounded p-4">
+                        <div class="">
+                            <div class="form-group text-center mb-4">
+                                <h1>Sign In</h1>
+                            </div>
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="text" name="PhoneNumber" autocomplete="off" id="form1Example13" class="form-control form-control" />
+                                <label class="form-label" for="form1Example13">Phone No</label>
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-3">
+                                <input type="password" name="password" autocomplete="off" id="form1Example23" class="form-control form-control" />
+                                <label class="form-label" for="form1Example23">Password</label>
+                            </div>
+                            <input type="text" hidden name="ReturnUrl" value="@TempData["ReturnUrl"]" class="form-control form-control" />
+
+                            <!-- Submit button -->
+                            <div class="form-control border-0 text-center bg-light">
+                                <input type="submit" class="avoidDoubleClick btn btn-primary" value="Login" />
+                            </div>
+                            <div class="form-control border-0 text-center bg-light d-flex justify-content-evenly">
+                                <div>
+                                    <a asp-controller="User" asp-action="SignUp">Sign Up</a>
+                                </div>
+                                <div>
+                                    <a asp-controller="User" asp-action="ForgottenPassword">Forgten Password</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+

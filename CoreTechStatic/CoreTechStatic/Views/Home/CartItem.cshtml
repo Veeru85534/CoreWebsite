@@ -1,0 +1,217 @@
+﻿@model IEnumerable<CoreTechStatic.Models.Cart>
+
+@{
+    // var TotalPrice = Model.Sum(sm => sm.PriceMaster.FinalPrice);
+    var TotalItem = Model.Sum(sm => sm.Quntity);
+    //var ItemCount = Model.Count();
+    var SubItemId = Model.Take(1).Sum(sid => sid.SubItemId);
+    var address = Model.Take(1).ToList();
+    int userID = int.Parse(User.Identity.Name);
+    decimal SUbtotalFinal = 0;
+    decimal SubTotal = 0;
+
+}
+<div class="card rounded-0  mb-3" style="background-color:#1d3557;opacity:0.8">
+    <div class="m-3">
+        <h1 class="text-white text-center">Shopping Cart</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card mb-4 p-1 mt-2 shadow rounded-5">
+                @if (Model.Count() == 0)
+                {
+                    <div class="text-center opacity-25 text-black-50">
+                        <i class="fa fa-shopping-cart" style="font-size:200px" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-center">
+                        <h2 class="fw-bold">Cart is empty.</h2><br>
+
+                        You don't have any products in the cart.<br />
+
+                        <a asp-action="Index" asp-controller="Home" style="background-color:#3d5a80" class="btn rounded-pill m-4 p-2 text-white">Return to Home</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="card-title text-white m-0 p-1 rounded-5" style="background-color:#1d3557">
+                        <span class="h2">Shoping Cart</span>
+                        <span class="pull-right">@Model.Count() items</span>
+                    </div>
+                    @foreach (var Item in Model)
+                    {
+                        <div class="card-body d-flex m-0 p-0">
+                            <div class="col-2 col-xl-2 m-0 p-0 hideDiv">
+                                <img src="~/Images/Products/@Item.Products.P_Image" class="img-thumbnail border-0 m-0 p-0" />
+                            </div>
+                            <div class="col-3 m-auto">
+                                @Item.Products.P_Name<br />
+                                @{
+                                    ///Calculation price per gst
+                                    var PerProductPrice = (Item.PriceMaster.FinalPrice * Item.Products.HsnMaster.GST / 100);
+                                    var PerProductGst = (PerProductPrice + Item.PriceMaster.FinalPrice)?.ToString("0.00");
+                                    ///Calculation part
+                                    var TaxbleAmount = (Item.PriceMaster.FinalPrice * Item.Quntity);
+                                    ////Gst Calculation
+                                    var GstAmount = (TaxbleAmount * Item.Products.HsnMaster.GST / 100);
+                                    ///Gst Total and Taxable amount
+                                    var TotalAmount = (decimal)(TaxbleAmount + GstAmount);
+                                    ///SubTotal Calculation
+                                    SubTotal += (Math.Round((decimal)TotalAmount));
+                                }
+                                @*<span class="fw-bold">, Price/Unit: ₹@Item.PriceMaster.FinalPrice/-, SubTotal: ₹@TotalAmount?.ToString("0.00")/-</span>*@
+                            </div>
+                            <div class="col m-auto">
+                                <div class="Name" style="display:none">
+                                    @Item.Cart_Id
+                                </div>
+                                <div class="text-center">
+                                    Quantity: <br />
+                                    &nbsp; &nbsp; &nbsp; &nbsp;<span >@Item.Quntity</span>
+                                </div>
+                                <div class="Val" style="display:none">@Item.Quntity</div>
+                                <div class="Price" style="display:none">@TotalAmount.ToString("0.00")</div>
+                                <div class="unitPrice" style="display:none">@Item.PriceMaster.FinalPrice?.ToString("0.00")</div>
+                                <div class="gst" style="display:none">@Item.Products.HsnMaster.GST.ToString("0.00")</div>
+                            </div>
+                            <div class="col m-auto">
+                                Price: <br />₹@PerProductGst/-
+                             
+                            </div>
+                            <div class="col m-auto">
+                                Total: <br/>₹@TotalAmount.ToString("0.00")/-
+                             
+                            </div>
+                            <div class="col text-center m-auto">
+                                <a asp-action="CartItemDelete" asp-route-id="@Item.Cart_Id" class="text-danger border-0 bg-white"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
+                                </div>
+                        </div>
+
+                        <hr class="m-0 p-0" />
+
+                    }
+                }
+            </div>
+        </div>
+
+        <div class="col-md-5 mt-2">
+            <form>
+                <div class="card shadow-lg mb-2 rounded">
+                    <div class="card-title text-center text-white m-0 p-1" style="background-color:#1d3557">
+                        PRICE DETAILS
+                    </div>
+                    <div class="card-body p-2">
+                        <div class="row d-flex justify-content-center">
+                            <div class="card-body">
+                                <div class="">
+                                    <table class="table table-sm table-borderless">
+                                        <tr>
+                                            <td>Price (@TotalItem)</td>
+                                            <td class="text-end">₹@SubTotal.ToString("0.00")/-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Delivery Charges</td>
+                                            <td class="text-end">₹150.00 /-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sub Total</td>
+                                            @{
+                                                SUbtotalFinal += SubTotal + 150;
+                                            }
+                                            <td class="text-end">₹@(SUbtotalFinal.ToString("0.00")) /-</td>
+                                        </tr>
+                                    </table>
+                                    <hr class="m-1" />
+                                </div>
+                            </div>
+
+
+                            @foreach (var add in address)
+                            {
+                                <div class="col-md-6">
+                                    <label>Address</label>
+
+                                    <textarea type="text" rows="3" disabled required class="form-control" placeholder="Address" id="address">@add.User.ShippingAddress</textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Phone Number</label>
+                                    <input type="tel" required maxlength="10" value="@add.User.Phone_No" pattern="[0-9]{10}" class="form-control" placeholder="Phone Number" id="phoneNumber" />
+                                    <label>Pin Code</label>
+                                    <input type="text" required pattern="[0-9]{10}" value="@add.User.Pin_Code" class="form-control" placeholder="Pin Code" id="pinCode" />
+                                </div>
+                            }
+                            <div class="mt-2 form-group text-center mb-2">
+                                @if (Model.Count() != 0)
+                                {
+
+                                    <button asp-action="CartItem" type="button" class="btn text-white" id="checkOut" style="background-color:#3d5a80">Proced to CheckOut</button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script>
+
+    $("#checkOut").click(function () {
+        if ($('#address').val != null) {
+            var Sample = [];
+            var arr = [];
+            $('.Name').each(function () {
+                var nam = $(this).text().trim();
+                var val = $(this).siblings('.Val').text().trim();
+                var price = $(this).siblings('.Price').text().trim();
+                var unitPrice = $(this).siblings('.unitPrice').text().trim();
+                var gst = $(this).siblings('.gst').text().trim();
+                arr.push({ Cart_Id: nam, NoOfItem: val, Price: price, UnitPrice:unitPrice, Gst:gst });
+                Sample = ({ SampleData: arr, TotalAmount: @SUbtotalFinal, TotalItem: @TotalItem, SubItemId: @SubItemId, Address: $('#address').val(), PhoneNumber: $('#phoneNumber').val(), PinCode: $('#pinCode').val() })
+            });
+            $.ajax({
+                type: "POST",
+                //contentType: "application/json; charset=utf-8",
+                url: "/Home/Values",
+                //data: JSON.stringify(Sample),
+                data: { "Input": Sample },
+                //dataType: "json",
+                success: function (response) {
+                    if (response.code === 0) {
+                        window.location = $(location).attr('href');
+                        $("#hideToast").html(`<div class="toast show align-items-center bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+                                                                                                <div class="d-flex">
+                                                                                                <div class="toast-body text-white">
+                                                                                                    `+ response.message + `
+                                                                                                </div>
+                                                                                                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                                                                </div>
+                                                                                                </div>`);
+                        $('.submitClick').prop('disabled', false);
+                    }
+                    if (response.code === 1) {
+                        $("#hideToast").html(`<div class="toast show align-items-center bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                                                                                                <div class="d-flex">
+                                                                                                <div class="toast-body text-white">
+                                                                                                    `+ response.message + `
+                                                                                                </div>
+                                                                                                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                                                                </div>
+                                                                                                </div>`);
+                        $('.submitClick').prop('disabled', false);
+                    }
+
+                },
+                error: function (err) {
+                }
+            });
+        }
+    });
+</script>

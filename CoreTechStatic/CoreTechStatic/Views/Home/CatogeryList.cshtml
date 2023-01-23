@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CoreTechStatic.Models.Category>
+
+@{
+    ViewData["Title"] = "Catogery";
+}
+<div class="card rounded-0  mb-3" style="background-color:#1d3557;opacity:0.8">
+    <div class="m-3">
+        <h1 class="text-white text-center">Category</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        @if (Model.Count() == 0)
+        {
+            <div>
+                <div class="text-danger text-center m-2 h5"> Product Not Found || <a asp-controller="Home" asp-action="ProductList" class="text-info">Back</a></div>
+            </div>
+        }
+        else
+        {
+            @foreach (var iteam in Model)
+            {
+                <div class="col-6 col-md-3 p-0 mb-3" id="listP">
+                    <div class=" p-3 rounded card border-2  m-1 item1">
+                        <div class=" m-auto">
+                            <img src="~/Images/Category/@iteam.Ca_Image" class="img-thumbnail border-0" alt="Product Image" />
+                        </div>                        
+                        <div style="height:2px;background-color:#ee6c4d;"></div>
+                        <div class="" style="height:40px">
+                            <a asp-area="" asp-action="ProductList" asp-route-id="@iteam.Ca_ID">
+                                <div class="card-body p-1 m-0 text-center">
+                                    <div class="card-title fw-bold m-0 h6">@iteam.Ca_Name</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

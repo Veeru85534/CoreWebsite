@@ -1,0 +1,48 @@
+﻿@model CoreTechStatic.Models.Products;
+
+<div class="col-md-7 m-auto p-3 mb-4 bg-white shadow-lg p-0 mb-3 mt-3 rounded border-0">
+    <form enctype="multipart/form-data" asp-controller="Admin" asp-action="EditProduct" method="post">
+        <input type="hidden" asp-for="P_Id" />
+        <div class="form-group text-center">
+            <h4>Edit Product</h4>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label>Product Name</label>
+                <input type="text" asp-for="P_Name" class="form-control" />
+            </div>
+            <div class="form-group col">
+                <label>Categori</label>
+                <select asp-for="Ca_Id" required asp-items="@(new SelectList(ViewBag.Categories,"Ca_ID","Ca_Name"))" class="form-control"></select>
+            </div>
+        </div>
+        @* <div class="row">
+            <div class="col form-group">
+                <label>Product Image</label>
+                <input type="file" name="file1" asp-for="P_Image" class="form-control" />
+            </div>
+            <div class="col form-group">
+                <label>Product Image</label>
+                <input type="file" name="file2" asp-for="P_ImageSec" class="form-control" />
+            </div>
+        </div>*@
+        <div class="row">
+            <div class="col">
+                <label class="form-label">Avalbility</label>
+                <select asp-for="Avalbility_Id" required asp-items="@(new SelectList(ViewBag.Avalbility,"Av_Id","Av_Name"))" class="form-control"></select>
+            </div>
+            <div class="form-group col">
+                <label class="form-label m-0 p-0">Active</label>
+                <select asp-for="Active_Id" required asp-items="@(new SelectList(ViewBag.Active,"Ac_Id","Ac_Name"))" class="form-control"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <textarea asp-for="P_Description" rows="4" class="form-control"></textarea>
+        </div>
+        <div class="form-group text-center">
+            <input type="submit" class="btn btn-primary" />
+        </div>
+
+    </form>
+</div>

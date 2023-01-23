@@ -1,0 +1,124 @@
+﻿@model IEnumerable<CoreTechStatic.Models.Products>
+
+<link href="~/lib/simplepagination.js/simplepagination.min.css" rel="stylesheet" />
+@{
+    ViewData["Title"] = "Product";
+}
+
+<style>
+
+    .i-hover:hover {
+        color: #fff;
+        background-color: #E22963 !important;
+        width: auto;
+        height: auto;
+        margin: 0px auto;
+    }
+
+</style>
+
+<div class="card rounded-0  mb-3" style="background-color:#1d3557;opacity:0.8">
+    <div class="m-3">
+        <h1 class="text-white text-center">Product's</h1>
+    </div>
+</div>
+<div class="container my-1">    
+        <div class="col">
+
+            <div class="">
+                <div class="row">
+                    <div class="col">
+                        @Model.Count() Items found
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+                <div class="row wrapper">
+                    @if (Model.Count() == 0)
+                    {
+                        <div>
+                            <div class="text-danger text-center m-2 h5"> Product Not Found || <a asp-controller="Home" asp-action="ProductList" asp-route-id="0" class="text-info">Back</a></div>
+                        </div>
+                    }
+                    else
+                    {
+                        @foreach (var iteam in Model)
+                        {
+                            <div class="col-6 col-md-3 p-0 mb-2 item">
+                                <div class="card p-1 border-2 rounded  m-1">
+                                    <span class="ImageSize">                                        
+                                            <img src="~/Images/Products/@iteam.P_Image" class="img-thumbnail border-0 m-0 p-0" alt="Product Image" />                                        
+                                    </span>
+                                    @if (iteam.Avalbility_Id == 2)
+                                    {
+                                        <div class="position-absolute text-danger"> Out of stock</div>
+                                    }
+
+                                    <div class="position-absolute end-0 me-2"><button type="button" onclick="addWhishList(@iteam.P_Id)" class="border-0 bg-white"><i class="fa fa-heart-o" style="font-size:22px" aria-hidden="true"></i></button></div>                                    
+                                        <!--<div class="position-absolute end-0 me-2"><a href="#" class=""><i class="fa fa-heart" style="font-size:22px" aria-hidden="true"></i></a></div>-->
+                                    <span style="height:2px;background-color:#ee6c4d;"></span>
+                                    <div class="" style="height:100px">
+                                        <a asp-action="ProductDetails" class="text-decoration-none" asp-route-category="@iteam.Category.Ca_ID" asp-route-id="@iteam.P_Id">
+                                            <div class="card-body p-0 m-0" id="nameProduct">
+                                                <div class="card-title m-0 text-center fw-bold">@iteam.P_Name</div>
+                                            </div>
+                                        </a>
+                                        @if (iteam.PriceID != null)
+                                        {
+                                            ////Final price calculation
+                                            var GstTotal = (iteam.PriceMaster.FinalPrice * iteam.HsnMaster.GST / 100);
+                                            var Round = GstTotal + iteam.PriceMaster.FinalPrice;
+                                            var SubTotal = Math.Round((decimal)Round);
+                                            <p class="p-0 m-0 text-center">
+                                                <span class="col text-success" style="text-decoration:solid">Rs: @SubTotal.ToString("0.00") /-</span>
+
+                                                @if (iteam.PriceMaster.DiscountPrice != null)
+                                                {
+                                                    ///Discount price calculation
+                                                    decimal DiscSubTotal = 0;
+                                                    var DiscGstTotal = (iteam.PriceMaster.DiscountPrice * iteam.HsnMaster.GST / 100);
+                                                    var DiscRount = (DiscGstTotal + iteam.PriceMaster.DiscountPrice);
+                                                    DiscSubTotal += Math.Round((decimal)DiscRount);
+                                                    <div class="text-danger text-center text-decoration-line-through h6">Rs: @DiscSubTotal.ToString("0.00")/-</div>
+                                                }
+                                            </p>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <input type="hidden" value="@Model.Count()" id="TotalIteam">
+                        <div class="text-center">
+                            <div id="pagination" class="compact-theme"></div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/simplepagination.js/jquery.simplepagination.min.js"></script>
+
+
+<script>
+  
+    displayIteam = 20,
+        $(".wrapper .item").slice(displayIteam).hide();
+    $('#pagination').pagination({
+        // Total number of items present
+        // in wrapper class
+        items: $("#TotalIteam").val(),
+        // Items allowed on a single page
+        itemsOnPage: displayIteam,
+        cssStyle: 'compact-theme',
+        onPageClick: function (noofele) {
+            $(".wrapper .item").hide()
+                .slice(displayIteam * (noofele - 1),
+                    displayIteam + displayIteam * (noofele - 1)).show();
+        }
+    });
+</script>

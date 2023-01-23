@@ -1,0 +1,93 @@
+﻿@model IEnumerable<CoreTechStatic.Models.Order>
+
+    <style>
+    .nowrap {
+        white-space: nowrap;
+    }
+    </style>
+
+<table class="table-bordered table table-success table-sm">
+    <thead class="">
+        <tr>
+            <th>Order No</th>
+            <th>Customer Id</th>
+            <th>Item</th>
+            <th>Order Date</th>
+            <th>SHIPPING ADDRESS</th>
+            <th>Phone</th>
+            <th>Amount</th>
+            <th>Pin Code</th>
+            <th>Status</th>
+            <th>Action</th>
+            <th>Invoice</th>
+        </tr>
+    </thead>
+    <thead class="">
+        @foreach (var Itam in Model)
+        {
+            <tr>
+                <td><a asp-route-subcartid="@Itam.CartSubID" asp-route-customerid="@Itam.CustomerId" asp-controller="Admin" asp-action="OrderIteamList">@Itam.OrderId</a></td>
+                <td>@Itam.CustomerId</td>
+                <td>@Itam.NoOfItem</td>
+                <td class="nowrap">@Itam.OrderDate.ToString("dd-MM-yyyy")</td>
+                <td>@Itam.Address</td>
+                <td>@Itam.PhoneNumber</td>
+                <td>@Itam.TotalPrice</td>
+                <td>@Itam.PinCode</td>
+                <td> @if (Itam.OrderStatus == 6)
+                    {
+
+                        <div class="rounded-pill p-0 disabled btn btn-success btn-sm m-1 w-100">Delivered</div>
+                        
+                    }
+                    else
+                    {
+                        <div class="rounded-pill p-0 disabled btn btn-warning btn-sm m-1 w-100">Pending</div>
+                    }
+                </td>
+                <td>                  
+                    @if (Itam.OrderStatus == 1)
+                    {
+                        <a class="text-danger" asp-route-OrderId="@Itam.OrderId" asp-route-orderstatus="@Itam.OrderStatus" asp-action="OrderStatus">
+                            <span>Confirm</span>
+                        </a>
+                    }
+                    else if (Itam.OrderStatus == 2)
+                    {
+                        <a class="text-danger" asp-route-OrderId="@Itam.OrderId" asp-route-orderstatus="@Itam.OrderStatus" asp-action="OrderStatus">
+                            <span class="text-secondary">Packed</span>
+                        </a>
+                    }
+                    else if (Itam.OrderStatus == 3)
+                    {
+                        <a class="text-danger" asp-route-OrderId="@Itam.OrderId" asp-route-orderstatus="@Itam.OrderStatus" asp-action="OrderStatus">
+                            <span class="text-info">Shipped</span>
+                        </a>
+                    }
+                    else if (Itam.OrderStatus == 4)
+                    {
+                        <a class="text-danger" asp-route-OrderId="@Itam.OrderId" asp-route-orderstatus="@Itam.OrderStatus" asp-action="OrderStatus">
+                            <span class="text-warning">Out for delivary</span>
+                        </a>
+                    }
+                    else if (Itam.OrderStatus == 5)
+                    {
+                        <a class="text-danger" asp-route-OrderId="@Itam.OrderId" asp-route-orderstatus="@Itam.OrderStatus" asp-action="OrderStatus">
+                            <span class="text-success">Delivared</span>
+                        </a>
+                    }
+                    else if (Itam.OrderStatus == 6)
+                    {
+                        <span class="text-success">Completed</span>
+                    }
+
+                </td>
+                <td>
+                    <a asp-action="Invoice" asp-route-Uid="@Itam.CustomerId" asp-route-Cart="@Itam.CartSubID"> Invoice</a>
+                </td>
+            </tr>
+        }
+    </thead>
+</table>
+
+

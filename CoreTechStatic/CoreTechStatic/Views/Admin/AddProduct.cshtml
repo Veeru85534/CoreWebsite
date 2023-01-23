@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "AddProduct";
+}
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<div class="bg-white mt-4  shadow-lg mb-5  rounded p-3">
+<div class="h5">New Product</div>
+<hr />
+<form enctype="multipart/form-data" asp-controller="Admin" asp-action="AddProduct" method="post">
+    <div class="row">
+        <div class="col">
+        <div class="h6 m-0 p-0">Product</div>
+        <hr class="m-1" />
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Product_Name</label>
+                    <input type="text" required name="P_Name" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Image</label>
+                    <input type="file" required name="file" accept="image/*" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Image(2)</label>
+                    <input type="file" name="file2" accept="image/*" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Category</label>
+                    @*<select name="Ca_Id" required asp-items="@(new SelectList(ViewBag.Categories,"Ca_ID","Ca_Name"))" class="form-control"></select>*@
+                    <select required class="form-control" id="categoryDropDown" name="Ca_Id"></select>
+                </div>               
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Description</label>
+                    <input type="text" name="P_Description" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Description</label>
+                    <select required class="form-control" id="hsnMasterDropDown" name="HsnCode"></select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Active</label>
+                    <select name="Active_Id" required asp-items="@(new SelectList(ViewBag.Active,"Ac_Id","Ac_Name"))" class="form-control"></select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Active</label>
+                    <select name="Avalbility_Id" required asp-items="@(new SelectList(ViewBag.Avalbility,"Av_Id","Av_Name"))" class="form-control"></select>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="h6 m-0 p-0">Specification</div>
+            <hr class="m-1" />
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Specification Id</label>
+                    <input type="text" name="S_Id" class="form-control" />
+                </div> 
+                <hr class="m-2 p-0" />
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Specification 1</label>
+                    <input type="text" name="S_type1" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Specification 2</label>
+                    <input type="text" name="S_type2" class="form-control" />
+                </div>                
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Specification 3</label>
+                    <input type="text" name="S_type3" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Specification 4</label>
+                    <input type="text" name="S_type4" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Specification 5</label>
+                    <input type="text" name="S_type5" class="form-control" />
+                </div>                
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Specification 6</label>
+                    <input type="text" name="S_type6" class="form-control" />
+                </div> 
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Specification 7</label>
+                    <input type="text" name="S_type7" class="form-control" />
+                </div> 
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Specification 8</label>
+                    <input type="text" name="S_type8" class="form-control" />
+                </div>  
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Specification 9</label>
+                    <input type="text" name="S_type9" class="form-control" />
+                </div> 
+                <div class="col-md-6">
+                    <label class="form-label m-0 p-0">Specification 10</label>
+                    <input type="text" name="S_type10" class="form-control" />
+                </div>                
+            </div>
+        </div>
+    </div>
+    <div class="form-group text-center m-2">
+        <input type="submit" class="btn btn-primary btn-sm" />
+    </div>
+</form>
+</div>

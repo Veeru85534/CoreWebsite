@@ -1,0 +1,28 @@
+﻿@model CoreTechStatic.Models.PriceMaster;
+
+
+<div class="col-md-6 bg-white shadow-lg p-3 m-auto mb-3 mt-3 rounded border-0">
+    <h5 class="text-center" >Update Price</h5>
+    <form asp-controller="Admin" asp-action="EditPrice" method="post">
+        <input type="hidden" asp-for="PriceId" />
+        <div class="form-group">
+            <label>Product Name</label>
+            <input type="text" asp-for="Products.P_Name" disabled class="form-control" />
+            </div>
+            <div class="row">
+                <div class="col form-group">
+                    <label>Discount Price</label>
+                    <input type="number" asp-for="DiscountPrice" class="form-control" />
+                </div>
+                <div class="col form-group">
+                    <label>Final Price</label>
+                    <input type="number" asp-for="FinalPrice" class="form-control" />
+                </div>
+              <input type="text" hidden name="ReturnUrl" value="@ViewBag.ReturnUrl" />
+                <div class="form-group text-center">
+                    <input type="submit" class="m-4 btn btn-sm btn-primary" />
+                </div>
+            </div>
+    </form>
+</div>
+

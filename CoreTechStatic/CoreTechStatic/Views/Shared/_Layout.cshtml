@@ -1,0 +1,448 @@
+﻿<!DOCTYPE html>
+<html lang="en kn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Core Technologies</title>
+    <link rel="icon" type="image/x-icon" href="~/Images/AppImages/favicon.png">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CoreTechStatic.styles.css" asp-append-version="true" />
+    <link href="~/lib/otherlib/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+</head>
+<style>
+  
+    .icon2 {
+        color: #293241;
+    }
+    icon2:hover{
+        color:#ee6c4d;
+    }
+    #btn-back-to-top {
+        position: fixed;
+        bottom: 55px;
+        right: 20px;
+        display: none;
+    }
+</style>
+<body class="mb-0">   
+    <a name="top"></a>
+    <header>
+        <div class="" style="background-color:#98c1d9;opacity:0.9">
+            <div class="container">
+                <div class="h-25 p-2">
+                    <div class="row">
+                        <div class="col">
+                            <ul class="header-links m-0 p-0">
+                                <li class="d-inline m-2"><a class="text-dark" href="tel:+919742986424"><i class="fa fa-phone" aria-hidden="true"></i> <span class="hideDiv">  +91 97429 86424</span></a></li>
+                                <li class="d-inline m-2"><a class="text-dark" href="https://mail.google.com/mail/?view=cm&fs=1&to=Coretechnology1991@gamil.com&su=SUBJECT&body=BODY" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="hideDiv"> Coretechnology1991@gamil.com</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col" align="right">
+                            <ul class="text-white header-links m-0 p-0">
+                                <!--  <li class="d-inline m-2 icon2" align="right"><a asp-controller="User" asp-action="Login"><i class="fa fa-user" aria-hidden="true"></i><span class="hideDiv"> LOGIN/REGISTER</span></a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="p-1 m-0" style="background-color:#98c1d9;">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-md-4 m-1 ml-auto">
+                        <div class="row justify-content-between">
+                            <div class="col m-1 text-center">
+                                <a class="navbar-brand" asp-action="Index" asp-controller="Home" asp-area="">
+                                    <img src="~/Images/AppImages/AppLogo.png" alt="" width="170" height="50"
+                                         class="d-inline-block align-text-top">
+                                </a>
+                            </div>
+                            <div class="col m-1">
+                                <button class="navbar-toggler showDiv pull-right" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="fa fa-bars icon" style="font-size:30px;color:#ee6c4d" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="pull-right mt-3 mb-2">
+                            <form asp-controller="Home" asp-action="ProductList" class="ms-3" method="post">
+                                <div class="row justify-content-center" style="width:100%;margin:0px auto">
+                                    <div class="col-4 m-0 p-0">
+                                        <!--<input type="text" class="rounded-5 rounded-end rounded-pill form-control rounded-0" placeholder="Category" name="Category" />-->
+                                        <select class="rounded-5 rounded-end rounded-pill form-control rounded-0" id="PickUpLocation" name="Category"></select>
+                                    </div>
+                                    <div class="col-5 m-0 p-0">
+                                        <input list="PickUpLocationProduct" autocomplete="off" placeholder="Search" class="form-control rounded-0" name="productname" />
+                                        <datalist id="PickUpLocationProduct">
+                                        </datalist>
+                                    </div>
+                                    <div class="col-3 m-0 p-0">
+                                        <button type="submit" style="background-color:#3d5a80" class="col-8 btn rounded-pill rounded-start rounded-0 text-white"><i class="fa fa-search" aria-hidden="true"></i> </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:2px;background-color:#ee6c4d;"></div>
+        <div id="navbar_top">
+            <nav class="navbar navbar-expand-sm py-1 navbar-light container bg-white fw-bold">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item p-1 active me-3">
+                            <a class="nav-link" aria-current="page" asp-action="Index" asp-controller="Home"
+                               asp-area="">Home</a>
+                        </li>
+                        <li class="nav-item dropdown p-1 me-3">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Shop
+                            </a>
+                            <ul class="text-secondary dropdown-menu m-0 p-0" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item nav-link p-1 fw-bold" asp-area="" asp-route-id="0" asp-controller="Home" asp-action="ProductList">
+                                        <i class="bi bi-upc-scan m-2"></i>Products
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item nav-link p-1 fw-bold" asp-area="" asp-controller="Home" asp-action="CatogeryList">
+                                        <i class="bi bi-bag-check-fill m-2"></i>Category
+                                    </a>
+                                </li>
+                                <li>
+                                    <div style="height:2px;background-color:#ee6c4d;" />
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown p-1 me-3 ">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                B2B
+                            </a>
+                            <ul class="dropdown-menu m-0 p-0 " aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item nav-link p-1 fw-bold" asp-area="" asp-controller="Home" asp-action="B2B">
+                                        <i class="bi bi-bag-check-fill m-2"></i>B2B
+                                    </a>
+                                </li>
+                                <li>
+                                    
+                                    <a class="dropdown-item nav-link p-1 fw-bold" asp-area="" asp-controller="Home" asp-action="AboutUs">
+                                        <i class="bi bi-columns-gap m-2"></i>About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <div style="height:2px;background-color:#ee6c4d;" />
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item p-1 me-3">
+                            <a class="nav-link" aria-current="page" asp-action="Contact" asp-controller="Home"
+                               asp-area="">Contact Us</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item p-1 me-3 pull-right">                          
+                            <a class="nav-link" aria-current="page" asp-action="WishList" asp-controller="Home"
+                               asp-area=""><i class="fa fa-heart" aria-hidden="true"></i><span class="showDiv"> WishList</span> </a>
+                        </li>
+                        <li class="nav-item p-1 me-3">
+                           @* <a type="button" class="nav-link position-relative" asp-action="CartItem" asp-controller="Home"
+                               asp-area="">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
+                                <span class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>*@
+                            <a class="nav-link" aria-current="page" asp-action="CartItem" asp-controller="Home"
+                               asp-area=""><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="showDiv"> Cart</span> </a>
+                        </li>
+                        <li class="nav-item p-1 me-3 pull-right">                          
+                            <a class="nav-link" aria-current="page" asp-action="OrderList" asp-controller="Home"
+                               asp-area=""><i class="fa fa-shopping-basket" aria-hidden="true"></i><span class="showDiv"> Order</span> </a>
+                        </li>
+                        <li class="nav-item p-1 me-3 pull-right">
+                            <a asp-controller="User" asp-action="Login" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i><span class="showDiv"> Login/Register</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <hr class="m-0 text-dark" style="height:1px" />
+
+        </div>
+    </header>   
+    <div class="">
+        <main role="main" class="">
+            @RenderBody()
+        </main>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-dark" style="background-color:#98c1d9">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+            <!-- Right -->
+            <div id="SocialMedia">
+                     
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <div class="mb-2">
+                         <img src="~/Images/AppImages/AppLogo.png" alt="" width="150" height="35"
+                                         class="d-inline-block align-text-top">
+                                         </div>
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem text-secondary"></i>Core Technologies
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Why Choose us?
+                        </h6>
+                        <p>
+                            <a asp-controller="Home" asp-action="AboutUs" class="text-reset">About Us</a>
+                        </p>
+                        <p>
+                            <a asp-action="Contact" class="text-reset">Contact Us</a>
+                        </p>
+                        <p>
+                            <a asp-controller="Home" asp-action="B2B" class="text-reset">Core Technologies B2B</a>
+                        </p>                       
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Policies
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Privacy policy</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Terms and Service</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Shipping and refund policy</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">FAQ</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+
+                        <p><a aria-label="Get directions to this location on Google Maps." target="_blank" jstcache="38" href="https://maps.google.com/maps/dir//Core+Technologies+Lower+ground+floor+malapir+Avenue+Opp+bvb+bus+stand+below+hara+granites,+Vidya+Nagar+Hubballi,+Karnataka+580031/@@15.3679193,75.1206495,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3bb8d2a06dbffbcf:0x3e7fd108d2072782" class="navigate-link text-dark"><i class="fa fa-map-marker me-3" aria-hidden="true"></i> <span>Below Hara Granites Opp <br/>&nbsp; &nbsp; &nbsp;&nbsp; Bvb College,<br/> &nbsp; &nbsp;&nbsp; &nbsp; Vidyanagar, Hubli - 580031</span></a></p>
+                        <p>
+                            <a class="text-dark" href="https://mail.google.com/mail/?view=cm&fs=1&to=Coretechnology1991@gamil.com&su=SUBJECT&body=BODY" target="_blank"><i class="fa fa-envelope me-3" aria-hidden="true"></i>Coretechnology1991@gamil.com</a>                                                      
+                        </p>
+                        <p><i class="fa fa-phone me-3 "></i> +91 97429 86424</p>
+                        <p><i class="fa fa-phone me-3 "></i> 082960 03756</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://www.linkedin.com/in/veeresh-k">Veeresh K</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <button type="button" class="btn btn-sm m-1 p-1 text-white hideDiv" style="background-color:#ee6c4d" id="btn-back-to-top">
+        <i class="fa fa-arrow-circle-up" style="font-size:30px"></i>
+    </button>
+    <div class="position-fixed bottom-0 w-100 mt-5 showDiv" style="background-color:#ee6c4d;">
+        <div class="row mt-2 justify-content-between ">
+            <div class="col">
+                <a asp-action="Index" asp-controller="Home">
+                    <div class="text-center h3 text-white">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        <div class="h6">Store</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a asp-route-id="0" asp-controller="Home" asp-action="CartItem">
+                    <div class="text-center h3 text-white">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <div class="h6">Cart</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a asp-action="Login" asp-controller="User">
+                    <div class="text-center h3 text-white">
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <div class="h6">Account</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="toast-container position-fixed top-0 end-0 p-3 hideToast" id="hideToast">
+    </div>
+    @if (TempData["Message"] != null)
+    {
+        <div class="toast-container position-fixed top-0 end-0 p-3 hideToast" id="">
+            <div class="toast show align-items-center bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body text-white">
+                        @TempData["Message"]
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    }
+    else if (TempData["Error"] != null)
+    {
+        <div class="toast-container position-fixed top-0 end-0 p-3 hideToast" id="">
+            <div class="toast show align-items-center bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body text-white">
+                        @TempData["Error"]
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    }
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 50 ||
+                document.documentElement.scrollTop > 50
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "/Home/CategoryListDropDown",
+                data: "{}",
+                success: function (data) {
+                    var s = '<option class=""  value="null">All Category</option>';
+                    for (var i = 0; i < data.length; i++) {
+                        //console.log(data[i])
+                        s += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
+                    }
+                    $("#PickUpLocation").html(s);
+                }
+            });
+            $.ajax({
+                type: "GET",
+                url: "/Home/SocialMediaLink",
+                data: "{}",
+                success: function (data) {
+                    var s = '';
+                    s += `<a href="${data[0].link}" target="_blank" class="me-4"><i class="fa fa-2x fa-whatsapp icon2"></i></a>`;
+                    s += `<a href="${data[1].link}" target="_blank" class="me-4 "><i class="fa fa-2x fa-facebook-f icon2"></i></a>`;
+                    s += `<a href="${data[2].link}" target="_blank" class="me-4 "><i class="fa fa-2x fa-youtube-play icon2"></i></a>`;
+                    s += `<a href="${data[3].link}" target="_blank" class="me-4 "><i class="fa fa-2x fa-instagram icon2"></i></a>`;
+                    s += `<a href="${data[4].link}" target="_blank" class="me-4 "><i class="fa fa-2x fa-linkedin icon2"></i></a>`;                 
+                    $("#SocialMedia").html(s);
+                }
+            });
+            $.ajax({
+                type: "GET",
+                url: `/Home/ProductListDropDown?id=0`,
+                data: "{}", success: function (data) {
+                    var s = '';
+                    for (var i = 0; i < data.length; i++) { s += '<option value="' + data[i].name + '">' + data[i].name + '</option>'; } $("#PickUpLocationProduct").html(s);
+                }
+            });
+            $(".navbar-nav li").hover(function () {
+                var isHovered = $(this).is(":hover");
+                if (isHovered) {
+                    $(this).children("ul").stop().slideDown(300);
+                } else {
+                    $(this).children("ul").stop().slideUp(300);
+                }
+            });
+            var Caid = 0;
+            $("#PickUpLocation").change(function () {
+                Caid = $("#PickUpLocation").val();
+                $.ajax({
+                    type: "GET",
+                    url: `/Home/ProductListDropDown?id=${Caid}`,
+                    data: "{}", success: function (data) {
+                        var s = '';
+                        for (var i = 0; i < data.length; i++) { s += '<option value="' + data[i].name + '">' + data[i].name + '</option>'; } $("#PickUpLocationProduct").html(s);
+                    }
+                });
+                $(".navbar-nav li").hover(function () {
+                    var isHovered = $(this).is(":hover");
+                    if (isHovered) {
+                        $(this).children("ul").stop().slideDown(300);
+                    } else {
+                        $(this).children("ul").stop().slideUp(300);
+                    }
+                });
+            });
+
+
+
+        });</script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

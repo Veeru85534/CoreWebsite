@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Publish\CoreTech</_PublishTargetUrl>
+    <History>True|2023-01-23T07:08:33.6339795Z;True|2023-01-21T17:14:39.7412732+05:30;True|2023-01-21T16:59:22.0788633+05:30;True|2023-01-21T14:14:51.0135876+05:30;True|2023-01-20T13:46:06.5222608+05:30;True|2023-01-18T17:23:35.2948524+05:30;True|2023-01-18T15:24:58.0153978+05:30;True|2023-01-17T17:20:51.4134137+05:30;True|2023-01-17T12:47:46.5347505+05:30;True|2023-01-16T15:54:49.4329406+05:30;True|2023-01-16T15:31:30.6721819+05:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
