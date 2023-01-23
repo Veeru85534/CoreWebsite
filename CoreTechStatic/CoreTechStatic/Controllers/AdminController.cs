@@ -6,6 +6,7 @@ using CoreTechStatic.Models.DateBase;
 using System.Dynamic;
 using CoreTechStatic.Models.Banner;
 using CoreTechStatic.Models.Static;
+using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 
 namespace CoreTechStatic.Controllers
 {
@@ -360,6 +361,7 @@ namespace CoreTechStatic.Controllers
                             P_ImageSec = FileName2,
                             P_AddDate = DateTime.Today.Date,
                             Ca_Id = products.Ca_Id,
+                            KeyWords = products.KeyWords,
                             HsnCode = products.HsnCode,
                             S_Id = id,
                             P_Description = products.P_Description,
@@ -375,6 +377,7 @@ namespace CoreTechStatic.Controllers
                             P_Image = FileName,
                             HsnCode = products.HsnCode,
                             P_ImageSec = FileName2,
+                            KeyWords = products.KeyWords,
                             P_AddDate = DateTime.Today.Date,
                             Ca_Id = products.Ca_Id,
                             S_Id = specification.S_Id,
@@ -555,6 +558,7 @@ namespace CoreTechStatic.Controllers
             var UpdateProduct = db.Product.Single(PID => PID.P_Id == ProductID);
             UpdateProduct.P_Name = products.P_Name;
             UpdateProduct.Ca_Id = products.Ca_Id;
+            UpdateProduct.KeyWords = products.KeyWords;
             UpdateProduct.Active_Id = products.Active_Id;
             UpdateProduct.Avalbility_Id = products.Avalbility_Id;
             UpdateProduct.P_Description = products.P_Description;

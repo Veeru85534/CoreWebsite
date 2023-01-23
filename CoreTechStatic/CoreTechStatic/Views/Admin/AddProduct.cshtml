@@ -38,6 +38,9 @@
                 <div class="col-md-6">
                     <label class="form-label m-0 p-0">Description</label>
                     <select required class="form-control" id="hsnMasterDropDown" name="HsnCode"></select>
+                </div><div class="col-md-6">
+                    <label class="form-label m-0 p-0">Description</label>
+                    <select required class="form-control" id="hsnMasterDropDown" name="HsnCode"></select>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label m-0 p-0">Active</label>
@@ -47,6 +50,10 @@
                     <label class="form-label m-0 p-0">Active</label>
                     <select name="Avalbility_Id" required asp-items="@(new SelectList(ViewBag.Avalbility,"Av_Id","Av_Name"))" class="form-control"></select>
                 </div>
+                    <div class="col-md-6">
+                        <label class="form-label m-0 p-0">Seo KeyWords</label>
+                        <input type="text" name="KeyWords"  class="form-control" />
+                    </div>
             </div>
         </div>
         <div class="col">

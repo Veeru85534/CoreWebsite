@@ -25,6 +25,7 @@
                 <th>Price</th>
                 <th>Avalbility</th>
                 <th>Active</th>
+                <th>SEO KeyWOrds</th>
                 <th>__Edit__</th>
             </tr>
         </thead>
@@ -79,6 +80,7 @@
                             <a class="link-danger" asp-controller="Admin" asp-action="ActiveProduct" asp-route-StockId="null" asp-route-StockId="@iteam.Avalbility_Id" asp-route-ActiveId="@iteam.Active_Id" asp-route-id="@iteam.P_Id">Deactive</a>
                         }
                     </td>
+                    <td class="nowrap ">@iteam.KeyWords</td>
                     <td>
                         <a asp-controller="Admin" asp-action="EditProduct" asp-route-ProductID="@iteam.P_Id" class="text-danger text-decoration-none text-center">Edit<i class="fa fa-pencil" aria-hidden="true"></i></a>
                     </td>
