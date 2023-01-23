@@ -1,0 +1,649 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CoreTechStatic.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CoreTechStatic.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AboutUs\\AboutUs1.jpg",
+      "PackagePath": "staticwebassets\\Images\\AboutUs\\AboutUs1.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AppImages\\AdminBG.jpg",
+      "PackagePath": "staticwebassets\\Images\\AppImages\\AdminBG.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AppImages\\AdminTabIcon.png",
+      "PackagePath": "staticwebassets\\Images\\AppImages\\AdminTabIcon.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AppImages\\AppLogo.png",
+      "PackagePath": "staticwebassets\\Images\\AppImages\\AppLogo.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AppImages\\CardBanner.jpg",
+      "PackagePath": "staticwebassets\\Images\\AppImages\\CardBanner.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AppImages\\ShortBanner.jpg",
+      "PackagePath": "staticwebassets\\Images\\AppImages\\ShortBanner.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AppImages\\ShortBanner2.jpg",
+      "PackagePath": "staticwebassets\\Images\\AppImages\\ShortBanner2.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AppImages\\ShortBanner3.png",
+      "PackagePath": "staticwebassets\\Images\\AppImages\\ShortBanner3.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AppImages\\favicon.png",
+      "PackagePath": "staticwebassets\\Images\\AppImages\\favicon.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AppImages\\loading-gif.gif",
+      "PackagePath": "staticwebassets\\Images\\AppImages\\loading-gif.gif"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AppImages\\shortbanner.png",
+      "PackagePath": "staticwebassets\\Images\\AppImages\\shortbanner.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\AppImages\\square.png",
+      "PackagePath": "staticwebassets\\Images\\AppImages\\square.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Banner\\Slide1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Banner\\Slide1.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category137560.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category137560.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category154785.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category154785.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category210730.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category210730.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category314854.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category314854.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category336927.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category336927.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category353942.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category353942.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category359252.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category359252.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category368371.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category368371.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category428345.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category428345.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category428774.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category428774.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category446401.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category446401.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category449571.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category449571.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category461172.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category461172.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category485066.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category485066.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category487343.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category487343.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category507660.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category507660.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category585331.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category585331.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Category\\Category587501.jpg",
+      "PackagePath": "staticwebassets\\Images\\Category\\Category587501.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product0949083818.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product0949083818.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product09490838702.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product09490838702.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1005095653.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1005095653.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product10051475452.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product10051475452.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1013487530.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1013487530.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product10134875562.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product10134875562.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1029197371.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1029197371.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1039364639.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1039364639.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product10393646802.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product10393646802.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1130085333.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1130085333.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1140330088.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1140330088.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product11403301162.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product11403301162.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1351309741.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1351309741.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product13513097722.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product13513097722.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1403344720.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1403344720.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1406411016.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1406411016.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1407250248.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1407250248.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1416049788.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1416049788.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product14160497892.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product14160497892.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1430557655.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1430557655.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1431253340.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1431253340.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1433425764.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1433425764.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1441581147.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1441581147.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product15563688652.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product15563688652.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1557471017.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1557471017.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product15574729712.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product15574729712.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1559531309.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1559531309.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product15595347032.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product15595347032.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1617540876.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1617540876.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product16175441252.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product16175441252.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1658276030.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1658276030.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1658533579.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1658533579.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1701076589.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1701076589.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1704051115.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1704051115.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\Images\\Products\\Product1705508893.jpg",
+      "PackagePath": "staticwebassets\\Images\\Products\\Product1705508893.jpg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\css\\AdminSite.css",
+      "PackagePath": "staticwebassets\\css\\AdminSite.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\js\\AdminSite.js",
+      "PackagePath": "staticwebassets\\js\\AdminSite.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\Nzoom.mi.js",
+      "PackagePath": "staticwebassets\\lib\\Nzoom.mi.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\font-awesome.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\font-awesome\\css\\font-awesome.css.map",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\font-awesome.css.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\font-awesome\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\font-awesome\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\jquery-ui.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_444444_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_444444_256x240.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_555555_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_555555_256x240.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_777620_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_777620_256x240.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_777777_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_777777_256x240.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_cc0000_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_cc0000_256x240.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\themes\\base\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\themes\\base\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\themes\\base\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\themes\\base\\theme.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\theme.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\jqueryui\\themes\\base\\theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jqueryui\\themes\\base\\theme.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\simplePagination.js\\jquery.simplePagination.js",
+      "PackagePath": "staticwebassets\\lib\\simplePagination.js\\jquery.simplePagination.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\simplePagination.js\\jquery.simplePagination.min.js",
+      "PackagePath": "staticwebassets\\lib\\simplePagination.js\\jquery.simplePagination.min.js"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\simplePagination.js\\jquery.simplePagination.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\simplePagination.js\\jquery.simplePagination.min.js.map"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\simplePagination.js\\simplePagination.css",
+      "PackagePath": "staticwebassets\\lib\\simplePagination.js\\simplePagination.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\simplePagination.js\\simplePagination.min.css",
+      "PackagePath": "staticwebassets\\lib\\simplePagination.js\\simplePagination.min.css"
+    },
+    {
+      "Id": "D:\\NewProject\\CoreWebsite\\CoreTechStatic\\CoreTechStatic\\wwwroot\\lib\\simplePagination.js\\simplePagination.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\simplePagination.js\\simplePagination.min.css.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.CoreTechStatic.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.CoreTechStatic.props",
+      "PackagePath": "build\\CoreTechStatic.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.CoreTechStatic.props",
+      "PackagePath": "buildMultiTargeting\\CoreTechStatic.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.CoreTechStatic.props",
+      "PackagePath": "buildTransitive\\CoreTechStatic.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
