@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<CoreTechStatic.Models.Cart>
 
 @{
+   
     // var TotalPrice = Model.Sum(sm => sm.PriceMaster.FinalPrice);
     var TotalItem = Model.Sum(sm => sm.Quntity);
     //var ItemCount = Model.Count();
@@ -84,7 +85,7 @@
                              
                             </div>
                             <div class="col text-center m-auto">
-                                <a asp-action="CartItemDelete" asp-route-id="@Item.Cart_Id" class="text-danger border-0 bg-white"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
+                                <a asp-action="CartItemDelete" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove" asp-route-id="@Item.Cart_Id" class="text-danger border-0 bg-white"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
                                 </div>
                         </div>
 
@@ -145,7 +146,7 @@
                                 @if (Model.Count() != 0)
                                 {
 
-                                    <button asp-action="CartItem" type="button" class="btn text-white" id="checkOut" style="background-color:#3d5a80">Proced to CheckOut</button>
+                                    <button asp-action="CartItem" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Please check address" class="btn text-white" id="checkOut" style="background-color:#3d5a80">Proced to CheckOut</button>
                                 }
                             </div>
                         </div>

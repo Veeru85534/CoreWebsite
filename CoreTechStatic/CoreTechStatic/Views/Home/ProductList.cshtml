@@ -3,6 +3,11 @@
 <link href="~/lib/simplepagination.js/simplepagination.min.css" rel="stylesheet" />
 @{
     ViewData["Title"] = "Product";
+    var items = Model.ToList();
+    foreach (var Items in Model.Where(KW=>KW.KeyWords != null).ToList())
+    {
+        ViewData["MetaContent"] = Items.KeyWords;
+    }
 }
 
 <style>

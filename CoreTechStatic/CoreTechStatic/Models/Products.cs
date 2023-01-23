@@ -17,6 +17,7 @@ namespace CoreTechStatic.Models
         public int? PriceID { get; set; }
         public string P_Description { get; set; }
         public string? Message { get; set; }
+        public string? KeyWords { get; set; }
         public int Avalbility_Id { get; set; }
         public int Active_Id { get; set; }
         [ForeignKey("HsnCode")]

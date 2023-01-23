@@ -12,6 +12,7 @@
     <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <meta name="keywords" content="Core Technologies,@ViewData["MetaContent"]" />
 </head>
 <style>
   
@@ -37,7 +38,7 @@
                     <div class="row">
                         <div class="col">
                             <ul class="header-links m-0 p-0">
-                                <li class="d-inline m-2"><a class="text-dark" href="tel:+919742986424"><i class="fa fa-phone" aria-hidden="true"></i> <span class="hideDiv">  +91 97429 86424</span></a></li>
+                                <li class="d-inline m-2" ><a class="text-dark" href="tel:+919742986424"><i class="fa fa-phone" aria-hidden="true"></i> <span class="hideDiv">  +91 97429 86424</span></a></li>
                                 <li class="d-inline m-2"><a class="text-dark" href="https://mail.google.com/mail/?view=cm&fs=1&to=Coretechnology1991@gamil.com&su=SUBJECT&body=BODY" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="hideDiv"> Coretechnology1991@gamil.com</span></a></li>
                             </ul>
                         </div>
@@ -85,7 +86,7 @@
                                         </datalist>
                                     </div>
                                     <div class="col-3 m-0 p-0">
-                                        <button type="submit" style="background-color:#3d5a80" class="col-8 btn rounded-pill rounded-start rounded-0 text-white"><i class="fa fa-search" aria-hidden="true"></i> </button>
+                                        <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" title="Search" style="background-color:#3d5a80" class="col-8 btn rounded-pill rounded-start rounded-0 text-white"><i class="fa fa-search" aria-hidden="true"></i> </button>
                                     </div>
                                 </div>
                             </form>
@@ -154,7 +155,7 @@
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item p-1 me-3 pull-right">                          
-                            <a class="nav-link" aria-current="page" asp-action="WishList" asp-controller="Home"
+                            <a class="nav-link" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="top" title="Wish List" asp-action="WishList" asp-controller="Home"
                                asp-area=""><i class="fa fa-heart" aria-hidden="true"></i><span class="showDiv"> WishList</span> </a>
                         </li>
                         <li class="nav-item p-1 me-3">
@@ -166,15 +167,15 @@
                                     <span class="visually-hidden">unread messages</span>
                                 </span>
                             </a>*@
-                            <a class="nav-link" aria-current="page" asp-action="CartItem" asp-controller="Home"
+                            <a class="nav-link" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="top" title="Cart" asp-action="CartItem" asp-controller="Home"
                                asp-area=""><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="showDiv"> Cart</span> </a>
                         </li>
                         <li class="nav-item p-1 me-3 pull-right">                          
-                            <a class="nav-link" aria-current="page" asp-action="OrderList" asp-controller="Home"
+                            <a class="nav-link" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="top" title="Order" asp-action="OrderList" asp-controller="Home"
                                asp-area=""><i class="fa fa-shopping-basket" aria-hidden="true"></i><span class="showDiv"> Order</span> </a>
                         </li>
                         <li class="nav-item p-1 me-3 pull-right">
-                            <a asp-controller="User" asp-action="Login" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i><span class="showDiv"> Login/Register</span></a>
+                            <a asp-controller="User" asp-action="Login" data-bs-toggle="tooltip" data-bs-placement="top" title="Sign in/Sign out" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i><span class="showDiv"> Login/Register</span></a>
                         </li>
                     </ul>
                 </div>
@@ -267,7 +268,7 @@
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
 
-                        <p><a aria-label="Get directions to this location on Google Maps." target="_blank" jstcache="38" href="https://maps.google.com/maps/dir//Core+Technologies+Lower+ground+floor+malapir+Avenue+Opp+bvb+bus+stand+below+hara+granites,+Vidya+Nagar+Hubballi,+Karnataka+580031/@@15.3679193,75.1206495,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3bb8d2a06dbffbcf:0x3e7fd108d2072782" class="navigate-link text-dark"><i class="fa fa-map-marker me-3" aria-hidden="true"></i> <span>Below Hara Granites Opp <br/>&nbsp; &nbsp; &nbsp;&nbsp; Bvb College,<br/> &nbsp; &nbsp;&nbsp; &nbsp; Vidyanagar, Hubli - 580031</span></a></p>
+                        <p><a data-bs-toggle="tooltip" data-bs-placement="top" title="View Location" aria-label="Get directions to this location on Google Maps." target="_blank" jstcache="38" href="https://maps.google.com/maps/dir//Core+Technologies+Lower+ground+floor+malapir+Avenue+Opp+bvb+bus+stand+below+hara+granites,+Vidya+Nagar+Hubballi,+Karnataka+580031/@@15.3679193,75.1206495,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3bb8d2a06dbffbcf:0x3e7fd108d2072782" class="navigate-link text-dark"><i class="fa fa-map-marker me-3" aria-hidden="true"></i> <span>Below Hara Granites Opp <br />&nbsp; &nbsp; &nbsp;&nbsp; Bvb College,<br /> &nbsp; &nbsp;&nbsp; &nbsp; Vidyanagar, Hubli - 580031</span></a></p>
                         <p>
                             <a class="text-dark" href="https://mail.google.com/mail/?view=cm&fs=1&to=Coretechnology1991@gamil.com&su=SUBJECT&body=BODY" target="_blank"><i class="fa fa-envelope me-3" aria-hidden="true"></i>Coretechnology1991@gamil.com</a>                                                      
                         </p>
